@@ -1,0 +1,15 @@
+{
+  "name": "chimericdream-eslintrc",
+  "version": "1.0.0",
+  "description": "My personal opinionated ESLint rules",
+  "author": "Bill Parrott <bill@chimericdream.com>",
+  "homepage": "https://github.com/chimericdream/eslintrc",
+  "repository": "chimericdream/eslintrc",
+  "bugs": {
+    "url": "https://github.com/chimericdream/eslintrc/issues"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "license": "MIT"
+}
