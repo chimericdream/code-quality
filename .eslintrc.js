@@ -319,7 +319,6 @@ module.exports = {
         'no-nested-ternary': 'error',
         'no-new-object': 'error',
         'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
-        'no-restricted-syntax': ['error', 'FunctionExpression', 'WithStatement'],
         'no-spaced-func': 'error',
         'no-tabs': 'error',
         'no-ternary': 'warn',
