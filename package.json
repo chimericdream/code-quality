@@ -1,9 +1,10 @@
 {
-  "name": "chimericdream-eslintrc",
+  "name": "eslint-config-chimericdream",
   "version": "1.0.0",
   "description": "My personal opinionated ESLint rules",
   "author": "Bill Parrott <bill@chimericdream.com>",
   "homepage": "https://github.com/chimericdream/eslintrc",
+  "main": ".eslintrc.js",
   "repository": "chimericdream/eslintrc",
   "bugs": {
     "url": "https://github.com/chimericdream/eslintrc/issues"
