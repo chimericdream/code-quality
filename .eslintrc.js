@@ -1,3 +1,5 @@
+/* global module */
+
 const restrictedModules = [
     'assert',
     'buffer',
@@ -33,6 +35,7 @@ module.exports = {
     },
     'rules': {
         // Possible Errors
+        'no-compare-neg-zero': 'error',
         'no-cond-assign': ['error', 'except-parens'],
         'no-console': ['error', {
             'allow': ['warn', 'error']
@@ -62,7 +65,7 @@ module.exports = {
             'skipRegExps': true,
             'skipTemplates': true
         }],
-        'no-negated-in-lhs': 'error',
+        'no-unsafe-negation': 'error',
         'no-obj-calls': 'error',
         'no-prototype-builtins': 'error',
         'no-regex-spaces': 'warn',
@@ -140,7 +143,7 @@ module.exports = {
         }],
         'no-multi-spaces': ['error', {'exceptions': {}}],
         'no-multi-str': 'error',
-        'no-native-reassign': ['error', {'exceptions': []}],
+        'no-global-assign': ['error', {'exceptions': []}],
         'no-new-func': 'error',
         'no-new-wrappers': 'error',
         'no-new': 'error',
@@ -291,8 +294,10 @@ module.exports = {
             'properties': true
         }],
         'new-parens': 'error',
-        'newline-after-var': ['error', 'always'],
-        'newline-before-return': 'error',
+        'padding-line-between-statements': [
+            'error',
+            {'blankLine': 'always', 'prev': 'var', 'next': 'return'}
+        ],
         'newline-per-chained-call': ['error', {'ignoreChainWithDepth': 2}],
         'no-array-constructor': 'error',
         'no-bitwise': 'error',
@@ -319,7 +324,7 @@ module.exports = {
         'no-nested-ternary': 'error',
         'no-new-object': 'error',
         'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
-        'no-spaced-func': 'error',
+        'func-call-spacing': ['error', 'never'],
         'no-tabs': 'error',
         'no-ternary': 'warn',
         'no-trailing-spaces': ['error', {'skipBlankLines': false}],
@@ -414,7 +419,6 @@ module.exports = {
             'destructuring': 'any',
             'ignoreReadBeforeAssign': false
         }],
-        'prefer-reflect': 'error',
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'error',
