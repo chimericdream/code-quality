@@ -182,7 +182,7 @@ module.exports = {
         'strict': ['error', 'global'],
 
         // Variables
-        'init-declarations': ['error', 'never', {'ignoreForLoopInit': true}],
+        'init-declarations': ['error', 'always'],
         'no-catch-shadow': 'error',
         'no-delete-var': 'error',
         'no-label-var': 'error',
