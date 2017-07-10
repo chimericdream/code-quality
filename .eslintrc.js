@@ -329,6 +329,7 @@ module.exports = {
         'no-ternary': 'warn',
         'no-trailing-spaces': ['error', {'skipBlankLines': false}],
         'no-underscore-dangle': ['error', {
+            'allow': ['__'],
             'allowAfterThis': true,
             'allowAfterSuper': true
         }],
