@@ -28,6 +28,12 @@ const restrictedModules = [
     'zlib'
 ];
 
+const warningComments = (() => {
+    const base = ['fix', 'todo', 'fixme', 'research', 'xxx'];
+
+    return base.concat(base.map((item) => {return `@${ item }`;}));
+})();
+
 module.exports = {
     'env': {
         'es6': true,
@@ -136,7 +142,7 @@ module.exports = {
         'no-lone-blocks': 'error',
         'no-loop-func': 'error',
         'no-magic-numbers': ['error', {
-            'ignore': [0, 1],
+            'ignore': [-1, 0, 1],
             'ignoreArrayIndexes': true,
             'enforceConst': true,
             'detectObjects': true
@@ -169,7 +175,7 @@ module.exports = {
         'no-useless-escape': 'error',
         'no-void': 'error',
         'no-warning-comments': ['warn', {
-            'terms': ['fix', 'todo', 'fixme', 'research'],
+            'terms': warningComments,
             'location': 'start'
         }],
         'no-with': 'error',
@@ -240,7 +246,7 @@ module.exports = {
         'id-length': ['error', {
             'min': 3,
             'properties': 'always',
-            'exceptions': ['_', '$', 'i', 'rp']
+            'exceptions': ['_', '__', '$', 'i', 'rp', 't']
         }],
         'indent': ['warn', 4, {
             'SwitchCase': 1,
