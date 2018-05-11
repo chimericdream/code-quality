@@ -1,13 +1,13 @@
 /* global module */
 
-import possibleErrors from './rules/core/possible-errors';
-import bestPractices from './rules/core/best-practices';
-import variables from './rules/core/variables';
-import nodejsCommonjs from './rules/core/nodejs-commonjs';
-import stylisticIssues from './rules/core/stylistic-issues';
-import es6 from './rules/core/es6';
+const possibleErrors = require('./rules/core/possible-errors.js');
+const bestPractices = require('./rules/core/best-practices.js');
+const variables = require('./rules/core/variables.js');
+const nodejsCommonjs = require('./rules/core/nodejs-commonjs.js');
+const stylisticIssues = require('./rules/core/stylistic-issues.js');
+const es6 = require('./rules/core/es6.js');
 
-import babel from './rules/plugins/babel';
+const babel = require('./rules/plugins/babel.js');
 
 module.exports = {
     'env': {
