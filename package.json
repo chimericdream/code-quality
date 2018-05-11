@@ -1,16 +1,21 @@
 {
-  "name": "eslint-config-chimericdream",
-  "version": "1.3.0",
-  "description": "My personal opinionated ESLint rules",
-  "author": "Bill Parrott <bill@chimericdream.com>",
-  "homepage": "https://github.com/chimericdream/eslintrc",
-  "main": ".eslintrc.js",
-  "repository": "chimericdream/eslintrc",
-  "bugs": {
-    "url": "https://github.com/chimericdream/eslintrc/issues"
-  },
-  "keywords": [
-    "eslint"
-  ],
-  "license": "MIT"
+    "name": "eslint-config-chimericdream",
+    "version": "2.0.0-beta",
+    "description": "My personal opinionated ESLint rules",
+    "author": "Bill Parrott <bill@chimericdream.com>",
+    "homepage": "https://github.com/chimericdream/eslintrc",
+    "main": ".eslintrc.js",
+    "repository": "chimericdream/eslintrc",
+    "bugs": {
+        "url": "https://github.com/chimericdream/eslintrc/issues"
+    },
+    "keywords": [
+        "eslint"
+    ],
+    "license": "MIT",
+    "peerDependencies": {
+        "babel-eslint": ">=8.0.0",
+        "eslint": ">=4.0.0",
+        "eslint-plugin-babel": ">=5.0.0"
+    }
 }
