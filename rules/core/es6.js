@@ -1,4 +1,7 @@
-/* global module */
+/* global module, require */
+
+const config = require('./_config.js');
+const restrictedModules = config.restrictedModules;
 
 module.exports = {
     'arrow-body-style': ['error', 'as-needed', {'requireReturnForObjectLiteral': false}],

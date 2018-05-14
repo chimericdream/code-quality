@@ -1,32 +1,7 @@
-/* global module */
+/* global module, require */
 
-const restrictedModules = [
-    'assert',
-    'buffer',
-    'child_process',
-    'cluster',
-    'crypto',
-    'dgram',
-    'dns',
-    'domain',
-    'freelist',
-    'module',
-    'net',
-    'os',
-    'punycode',
-    'readline',
-    'repl',
-    'smalloc',
-    'stream',
-    'string_decoder',
-    'sys',
-    'timers',
-    'tls',
-    'tracing',
-    'tty',
-    'vm',
-    'zlib',
-];
+const config = require('./_config.js');
+const restrictedModules = config.restrictedModules;
 
 module.exports = {
     'callback-return': ['error', [

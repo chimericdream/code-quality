@@ -24,7 +24,8 @@ module.exports = {
         'sourceType': 'module',
     },
     'plugins': [
-        'babel'
+        'babel',
+        'import'
     ],
     'rules': {
         'strict': ['error', 'global'],

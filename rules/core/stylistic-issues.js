@@ -12,7 +12,7 @@ module.exports = {
             'ignoreInlineComments': true,
         },
         'line': {
-            'ignoreConsecutiveComments ': true,
+            'ignoreConsecutiveComments': true,
         },
     }],
     'comma-dangle': ['error', {
@@ -43,7 +43,7 @@ module.exports = {
         'properties': 'always',
         'exceptions': ['_', '__', '$', 'el', 'i', 'j', 'rp', 't']
     }],
-    'id-match': ['error', '^[a-z][a-z0-9]*([A-Z][a-z0-9]+)*$', {'properties': true}],
+    'id-match': ['error', '^([A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*|[a-z][a-z0-9]*(?:[A-Z][a-z0-9]+)*)$', {'properties': true}],
     'implicit-arrow-linebreak': ['error', 'beside'],
     'indent': ['warn', 4, {
         'ArrayExpression': 1,
