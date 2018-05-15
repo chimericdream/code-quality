@@ -1,3 +1,4 @@
+/* eslint-disable filenames/no-index */
 /* global module, require */
 
 const possibleErrors = require('./lib/rules/core/possible-errors.js');
