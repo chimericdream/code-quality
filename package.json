@@ -5,6 +5,9 @@
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/eslintrc",
     "main": ".eslintrc.js",
+    "scripts": {
+        "lint": "eslint index.js src"
+    },
     "repository": "chimericdream/eslintrc",
     "bugs": {
         "url": "https://github.com/chimericdream/eslintrc/issues"
@@ -19,7 +22,8 @@
         "babel-preset-es2015": ">=6.0.0",
         "eslint": ">=4.0.0",
         "eslint-plugin-babel": ">=5.0.0",
-        "eslint-plugin-import": ">=2.0.0"
+        "eslint-plugin-filenames": ">=1.0.0",
+        "eslint-plugin-sort-class-members": ">=1.0.0"
     },
     "peerDependencies": {
         "babel-core": ">=6.0.0",
@@ -27,6 +31,8 @@
         "babel-preset-es2015": ">=6.0.0",
         "eslint": ">=4.0.0",
         "eslint-plugin-babel": ">=5.0.0",
-        "eslint-plugin-import": ">=2.0.0"
-    }
+        "eslint-plugin-filenames": ">=1.0.0",
+        "eslint-plugin-sort-class-members": ">=1.0.0"
+    },
+    "dependencies": {}
 }
