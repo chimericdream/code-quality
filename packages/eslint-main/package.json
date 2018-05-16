@@ -1,0 +1,37 @@
+{
+    "name": "@chimericdream/eslint-config",
+    "version": "2.0.0",
+    "description": "My personal opinionated ESLint rules",
+    "author": "Bill Parrott <bill@chimericdream.com>",
+    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-main/",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint index.js src"
+    },
+    "bugs": {
+        "url": "https://github.com/chimericdream/code-quality/issues"
+    },
+    "keywords": [
+        "eslint"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "babel-core": ">=6.0.0",
+        "babel-eslint": ">=8.0.0",
+        "babel-preset-es2015": ">=6.0.0",
+        "eslint": ">=4.0.0",
+        "eslint-plugin-babel": ">=5.0.0",
+        "eslint-plugin-filenames": ">=1.0.0",
+        "eslint-plugin-sort-class-members": ">=1.0.0"
+    },
+    "peerDependencies": {
+        "babel-core": ">=6.0.0",
+        "babel-eslint": ">=8.0.0",
+        "babel-preset-es2015": ">=6.0.0",
+        "eslint": ">=4.0.0",
+        "eslint-plugin-babel": ">=5.0.0",
+        "eslint-plugin-filenames": ">=1.0.0",
+        "eslint-plugin-sort-class-members": ">=1.0.0"
+    },
+    "dependencies": {}
+}

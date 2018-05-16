@@ -1,0 +1,7 @@
+{
+    "extends": "chimericdream",
+    "rules": {
+        "id-match": "off",
+        "no-magic-numbers": "off"
+    }
+}
