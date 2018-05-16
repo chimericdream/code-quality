@@ -4,7 +4,7 @@
     "description": "My personal opinionated ESLint rules",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/eslintrc",
-    "main": ".eslintrc.js",
+    "main": "index.js",
     "scripts": {
         "lint": "eslint index.js src"
     },
