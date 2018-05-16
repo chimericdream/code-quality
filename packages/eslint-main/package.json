@@ -1,16 +1,15 @@
 {
-    "name": "eslint-config-chimericdream",
+    "name": "@chimericdream/eslint-config",
     "version": "2.0.0-beta.3",
     "description": "My personal opinionated ESLint rules",
     "author": "Bill Parrott <bill@chimericdream.com>",
-    "homepage": "https://github.com/chimericdream/eslintrc",
+    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-main/",
     "main": "index.js",
     "scripts": {
         "lint": "eslint index.js src"
     },
-    "repository": "chimericdream/eslintrc",
     "bugs": {
-        "url": "https://github.com/chimericdream/eslintrc/issues"
+        "url": "https://github.com/chimericdream/code-quality/issues"
     },
     "keywords": [
         "eslint"
