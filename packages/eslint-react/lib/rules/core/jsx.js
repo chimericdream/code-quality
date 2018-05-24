@@ -5,6 +5,13 @@ module.exports = {
     'react/jsx-child-element-spacing': 'warn',
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
     'react/jsx-closing-tag-location': 'error',
+    'react/jsx-curly-brace-presence': [
+        'error',
+        {
+            children: 'ignore',
+            props: 'never',
+        },
+    ],
     'react/jsx-curly-spacing': ['error', {
         when: 'never',
         attributes: {allowMultiline: false, when: 'never'},
@@ -35,15 +42,7 @@ module.exports = {
     'react/jsx-no-target-blank': 'error',
     'react/jsx-no-undef': 'error',
     'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-curly-brace-presence': [
-        'error',
-        {
-            children: 'always',
-            props: 'always',
-        },
-    ],
     'react/jsx-pascal-case': 'error',
-    'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-sort-default-props': ['error', {ignoreCase: true}],
     'react/jsx-sort-props': [
         'error',
