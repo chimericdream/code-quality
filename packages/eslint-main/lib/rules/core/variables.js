@@ -16,7 +16,7 @@ module.exports = {
                 'cb',
                 'callback',
             ],
-            builtinGlobals: true,
+            builtinGlobals: false,
             hoist: 'all',
         },
     ],
