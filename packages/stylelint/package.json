@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/stylelint",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0",
     "description": "My personal opinionated Stylelint rules",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/stylelint/",
