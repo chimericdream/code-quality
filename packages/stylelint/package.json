@@ -1,0 +1,24 @@
+{
+    "name": "@chimericdream/stylelint",
+    "version": "1.0.0",
+    "description": "My personal opinionated Stylelint rules",
+    "author": "Bill Parrott <bill@chimericdream.com>",
+    "homepage": "https://github.com/chimericdream/code-quality/packages/stylelint/",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint index.js lib"
+    },
+    "bugs": {
+        "url": "https://github.com/chimericdream/code-quality/issues"
+    },
+    "keywords": [
+        "stylelint",
+        "scss"
+    ],
+    "license": "MIT",
+    "devDependencies": {},
+    "peerDependencies": {
+        "stylelint": "^8.0.0 || ^9.0.0",
+        "stylelint-scss": "^3.0.0"
+    }
+}
