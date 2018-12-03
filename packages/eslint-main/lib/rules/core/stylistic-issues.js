@@ -72,7 +72,8 @@ module.exports = {
     /* eslint-disable array-element-newline */
     'id-match': [
         'error',
-        '/^([A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*|[a-z][a-z0-9]*(?:[A-Z][a-z0-9]+)*)$/',
+        /* eslint-disable-next-line max-len */
+        '^([A-Z][a-z0-9]*(?:[A-Z][a-z0-9]*)*|[A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*|[a-z][a-z0-9]*(?:[A-Z][a-z0-9]*)*)$',
         {properties: true},
     ],
     /* eslint-enable array-element-newline */
@@ -289,8 +290,8 @@ module.exports = {
     'semi': 'off',
     'semi-spacing': ['error', {after: true, before: false}],
     'semi-style': ['error', 'last'],
-    'sort-keys': ['warn', 'asc', {caseSensitive: false, natural: true}],
-    'sort-vars': ['warn', {ignoreCase: true}],
+    'sort-keys': 'off',
+    'sort-vars': 'off',
     'space-before-blocks': ['error', 'always'],
     'space-before-function-paren': ['error', 'never'],
     'space-in-parens': ['error', 'never'],

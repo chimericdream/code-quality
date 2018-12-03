@@ -12,11 +12,14 @@ module.exports = {
             props: 'never',
         },
     ],
-    'react/jsx-curly-spacing': ['error', {
-        when: 'never',
-        attributes: {allowMultiline: false, when: 'never'},
-        children: {when: 'never'},
-    }],
+    'react/jsx-curly-spacing': [
+        'error',
+        {
+            when: 'never',
+            attributes: {allowMultiline: false, when: 'never'},
+            children: {when: 'never'},
+        },
+    ],
     'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-filename-extension': ['error', {extensions: ['.js', '.jsx']}],
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
@@ -31,10 +34,13 @@ module.exports = {
     'react/jsx-indent-props': 'error',
     'react/jsx-key': 'error',
     'react/jsx-max-depth': ['error', {max: 3}],
-    'react/jsx-max-props-per-line': ['error', {
-        maximum: 1,
-        when: 'multiline',
-    }],
+    'react/jsx-max-props-per-line': [
+        'error',
+        {
+            maximum: 1,
+            when: 'multiline',
+        },
+    ],
     'react/jsx-no-bind': 'error',
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-duplicate-props': ['error', {ignoreCase: true}],
@@ -55,12 +61,15 @@ module.exports = {
             shorthandLast: false,
         },
     ],
-    'react/jsx-tag-spacing': ['error', {
-        closingSlash: 'never',
-        beforeSelfClosing: 'always',
-        afterOpening: 'never',
-        beforeClosing: 'never',
-    }],
+    'react/jsx-tag-spacing': [
+        'error',
+        {
+            closingSlash: 'never',
+            beforeSelfClosing: 'always',
+            afterOpening: 'never',
+            beforeClosing: 'never',
+        },
+    ],
 
     /**
      * The following two rules just make ESLint work properly with JSX, so they
@@ -68,13 +77,16 @@ module.exports = {
      */
     'react/jsx-uses-react': 2,
     'react/jsx-uses-vars': 2,
-    'react/jsx-wrap-multilines': ['error', {
-        'declaration': 'parens-new-line',
-        'assignment': 'parens-new-line',
-        'return': 'parens-new-line',
-        'arrow': 'parens-new-line',
-        'condition': 'ignore',
-        'logical': 'ignore',
-        'prop': 'ignore'
-    }]
+    'react/jsx-wrap-multilines': [
+        'error',
+        {
+            'declaration': 'parens-new-line',
+            'assignment': 'parens-new-line',
+            'return': 'parens-new-line',
+            'arrow': 'parens-new-line',
+            'condition': 'ignore',
+            'logical': 'ignore',
+            'prop': 'ignore',
+        },
+    ],
 };

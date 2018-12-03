@@ -16,7 +16,9 @@
         "scss"
     ],
     "license": "MIT",
-    "devDependencies": {},
+    "devDependencies": {
+        "@chimericdream/eslint-config": ">=2.0.0"
+    },
     "peerDependencies": {
         "stylelint": "^8.0.0 || ^9.0.0",
         "stylelint-scss": "^3.0.0"

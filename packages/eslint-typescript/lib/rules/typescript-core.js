@@ -1,5 +1,4 @@
 /* global module */
-'use strict';
 
 module.exports = {
     'typescript/adjacent-overload-signatures': 'warn',
