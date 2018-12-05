@@ -56,19 +56,7 @@ module.exports = {
     'prefer-template': 'error',
     'require-yield': 'error',
     'rest-spread-spacing': ['error', 'never'],
-    'sort-imports': [
-        'error',
-        {
-            ignoreCase: false,
-            ignoreMemberSort: false,
-            memberSyntaxSortOrder: [
-                'none',
-                'all',
-                'multiple',
-                'single',
-            ],
-        },
-    ],
+    'sort-imports': 'off',
     'symbol-description': 'error',
     'template-curly-spacing': ['error', 'never'],
     'yield-star-spacing': ['error', 'before'],
