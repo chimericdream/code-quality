@@ -48,18 +48,6 @@ try {
 }
 
 try {
-    require.resolve('eslint-plugin-filenames');
-    const filenames = require('./lib/rules/plugins/filenames.js');
-
-    config = update(config, {
-        plugins: {$push: ['filenames']},
-        rules: {$merge: filenames},
-    });
-} catch {
-    // no-op
-}
-
-try {
     require.resolve('eslint-plugin-sort-class-members');
     const sortClassMembers = require('./lib/rules/plugins/sort-class-members.js');
 
