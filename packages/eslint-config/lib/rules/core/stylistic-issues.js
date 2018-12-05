@@ -2,9 +2,9 @@
 /* global module */
 
 module.exports = {
-    'array-bracket-newline': ['error', {minItems: 4, multiline: true}],
+    'array-bracket-newline': ['error', {minItems: 3, multiline: true}],
     'array-bracket-spacing': ['error', 'never'],
-    'array-element-newline': ['error', {minItems: 4, multiline: true}],
+    'array-element-newline': ['error', {minItems: 3, multiline: true}],
     'block-spacing': ['error', 'never'],
     'brace-style': ['error', '1tbs'],
 
@@ -249,7 +249,7 @@ module.exports = {
         'error',
         {
             consistent: true,
-            minProperties: 4,
+            minProperties: 3,
         },
     ],
 
