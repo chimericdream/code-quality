@@ -5,6 +5,7 @@ module.exports = {
     'typescript/class-name-casing': 'error',
     'typescript/explicit-function-return-type': ['error', {allowExpressions: true}],
     'typescript/explicit-member-accessibility': 'warn',
+    'typescript/generic-type-naming': ['error', '^T[A-Z][a-zA-Z]+$'],
     'typescript/interface-name-prefix': ['error', 'never'],
     'typescript/member-delimiter-style': [
         'error',
@@ -18,7 +19,7 @@ module.exports = {
     'typescript/member-ordering': 'error',
     'typescript/no-angle-bracket-type-assertion': 'error',
 
-    // already enabled in @chimericdream/eslint-config
+    // Already enabled in main eslint config
     'typescript/no-array-constructor': 'off',
     'typescript/no-empty-interface': 'warn',
     'typescript/no-explicit-any': 'warn',
@@ -35,7 +36,7 @@ module.exports = {
     'typescript/no-type-alias': 'error',
     'typescript/no-unused-vars': 'error',
 
-    // already enabled in @chimericdream/eslint-config
+    // Already enabled in main eslint config
     'typescript/no-use-before-define': 'off',
     'typescript/no-var-requires': 'error',
     'typescript/prefer-namespace-keyword': 'off',

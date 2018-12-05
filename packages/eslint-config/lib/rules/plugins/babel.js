@@ -11,6 +11,7 @@ module.exports = {
             properties: true,
         },
     ],
+    'babel/camelcase': ['error', {properties: 'always'}],
     'babel/no-invalid-this': 'error',
     'babel/no-unused-expressions': [
         'error',
@@ -30,4 +31,5 @@ module.exports = {
         },
     ],
     'babel/semi': ['error', 'always'],
+    'babel/valid-typeof': 'error',
 };

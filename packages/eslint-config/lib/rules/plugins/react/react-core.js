@@ -1,5 +1,4 @@
 /* global module */
-'use strict';
 
 module.exports = {
     'react/boolean-prop-naming': [
@@ -38,6 +37,7 @@ module.exports = {
     'react/no-typos': 'error',
     'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
+    'react/no-unsafe': 'error',
     'react/no-unused-prop-types': 'error',
     'react/no-unused-state': 'error',
     'react/no-will-update-set-state': ['error', 'disallow-in-func'],
@@ -96,7 +96,7 @@ module.exports = {
             ignoreCase: true,
             requiredFirst: true,
             sortShapeProp: true,
-        }
+        },
     ],
 
     // No need for this, because the 'style' property is forbidden above

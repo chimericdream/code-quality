@@ -23,6 +23,7 @@ module.exports = {
     'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-filename-extension': ['error', {extensions: ['.js', '.jsx']}],
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
+    'react/jsx-fragments': ['error', 'element'],
     'react/jsx-handler-names': [
         'error',
         {
@@ -45,6 +46,7 @@ module.exports = {
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-duplicate-props': ['error', {ignoreCase: true}],
     'react/jsx-no-literals': 'error',
+    'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-no-target-blank': 'error',
     'react/jsx-no-undef': 'error',
     'react/jsx-one-expression-per-line': 'off',

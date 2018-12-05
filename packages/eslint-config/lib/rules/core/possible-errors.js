@@ -3,6 +3,7 @@
 module.exports = {
     'for-direction': 'error',
     'getter-return': 'error',
+    'no-async-promise-executor': 'error',
     'no-await-in-loop': 'error',
     'no-compare-neg-zero': 'error',
     'no-cond-assign': ['error', 'except-parens'],
@@ -50,6 +51,7 @@ module.exports = {
     'no-unreachable': 'error',
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',
+    'require-atomic-updates': 'error',
     'use-isnan': 'error',
     'valid-jsdoc': [
         'warn',
@@ -74,5 +76,7 @@ module.exports = {
             requireReturnType: true,
         },
     ],
-    'valid-typeof': 'error',
+
+    // See babel/valid-typeof
+    'valid-typeof': 'off',
 };

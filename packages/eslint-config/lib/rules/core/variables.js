@@ -2,7 +2,6 @@
 
 module.exports = {
     'init-declarations': ['error', 'always'],
-    'no-catch-shadow': 'error',
     'no-delete-var': 'error',
     'no-label-var': 'error',
     'no-restricted-globals': ['error', 'event', 'fdescribe'],

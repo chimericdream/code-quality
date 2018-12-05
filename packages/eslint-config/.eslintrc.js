@@ -7,5 +7,6 @@ module.exports = {
     rules: {
         ...baseConfig.rules,
         'no-magic-numbers': 'off',
+        'filenames/match-regex': 'off',
     },
 };

@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 /* global module */
 
 module.exports = {
@@ -6,16 +7,20 @@ module.exports = {
     'array-element-newline': ['error', {minItems: 4, multiline: true}],
     'block-spacing': ['error', 'never'],
     'brace-style': ['error', '1tbs'],
-    'camelcase': ['error', {properties: 'always'}],
+
+    // See babel/camelcase
+    'camelcase': 'off',
     'capitalized-comments': [
         'warn',
         'always',
         {
             block: {
                 ignoreInlineComments: true,
+                ignorePattern: 'pragma|ignore|noop|no-op',
             },
             line: {
                 ignoreConsecutiveComments: true,
+                ignorePattern: 'pragma|ignore|noop|no-op',
             },
         },
     ],
@@ -59,11 +64,19 @@ module.exports = {
                 '_',
                 '__',
                 '$',
+                'a',
+                'b',
+                'cb',
+                'e',
                 'el',
+                'ex',
+                'fn',
                 'i',
                 'j',
                 'rp',
                 't',
+                'x',
+                'y',
             ],
             min: 3,
             properties: 'always',
@@ -73,7 +86,7 @@ module.exports = {
     'id-match': [
         'error',
         /* eslint-disable-next-line max-len */
-        '^([A-Z][a-z0-9]*(?:[A-Z][a-z0-9]*)*|[A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*|[a-z][a-z0-9]*(?:[A-Z][a-z0-9]*)*)$',
+        '^\\$?([A-Z][a-z0-9]*(?:[A-Z][a-z0-9]*)*|[A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*|[a-z][a-z0-9]*(?:[A-Z][a-z0-9]*)*)$',
         {properties: true},
     ],
     /* eslint-enable array-element-newline */
@@ -140,6 +153,7 @@ module.exports = {
             skipComments: true,
         },
     ],
+    'max-lines-per-function': ['warn', {max: 30}],
     'max-nested-callbacks': ['error', {max: 3}],
     'max-params': ['warn', {max: 5}],
     'max-statements': ['warn', 10, {ignoreTopLevelFunctions: true}],
@@ -271,6 +285,7 @@ module.exports = {
         {blankLine: 'always', next: '*', prev: 'directive'},
         {blankLine: 'any', next: 'directive', prev: 'directive'},
     ],
+    'prefer-object-spread': 'error',
     'quote-props': ['error', 'consistent-as-needed', {keywords: true}],
 
     // See babel/quotes
