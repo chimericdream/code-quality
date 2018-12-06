@@ -16,11 +16,11 @@ module.exports = {
         {
             block: {
                 ignoreInlineComments: true,
-                ignorePattern: 'pragma|ignore|noop|no-op',
+                ignorePattern: 'pragma|ignore|noop|no-op|noinspection',
             },
             line: {
                 ignoreConsecutiveComments: true,
-                ignorePattern: 'pragma|ignore|noop|no-op',
+                ignorePattern: 'pragma|ignore|noop|no-op|noinspection',
             },
         },
     ],
