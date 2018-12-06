@@ -1,5 +1,11 @@
 {
-	"devDependencies": {
-		"lerna": "^2.11.0"
-	}
+ "name": "@chimericdream/code-quality-monorepo",
+ "version": "3.0.0",
+ "private": true,
+ "scripts": {
+  "postinstall": "lerna bootstrap"
+ },
+ "devDependencies": {
+  "lerna": "3.5.1"
+ }
 }
