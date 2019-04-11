@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-react",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "My personal opinionated ESLint rules for React",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-react/",
@@ -21,7 +21,7 @@
         "eslint-plugin-react": "^7.12.4"
     },
     "devDependencies": {
-        "@chimericdream/eslint-config": "^3.0.6",
+        "@chimericdream/eslint-config": "^3.0.7",
         "eslint": "^5.16.0"
     },
     "peerDependencies": {

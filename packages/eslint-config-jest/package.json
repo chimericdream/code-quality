@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-jest",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "My personal opinionated ESLint rules for the Jest plugin",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-jest/",
@@ -21,7 +21,7 @@
         "eslint-plugin-jest": "^22.4.1"
     },
     "devDependencies": {
-        "@chimericdream/eslint-config": "^3.0.6",
+        "@chimericdream/eslint-config": "^3.0.7",
         "eslint": "^5.16.0"
     },
     "peerDependencies": {
