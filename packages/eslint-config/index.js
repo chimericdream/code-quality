@@ -1,14 +1,13 @@
-/* global module, require */
+/* global __dirname, module, require */
 
-const possibleErrors = require('./lib/rules/core/possible-errors.js');
-const bestPractices = require('./lib/rules/core/best-practices.js');
-const variables = require('./lib/rules/core/variables.js');
-const nodejsCommonjs = require('./lib/rules/core/nodejs-commonjs.js');
-const stylisticIssues = require('./lib/rules/core/stylistic-issues.js');
-const es6 = require('./lib/rules/core/es6.js');
+const possibleErrors = require(`${__dirname}/lib/rules/core/possible-errors.js`);
+const bestPractices = require(`${__dirname}/lib/rules/core/best-practices.js`);
+const variables = require(`${__dirname}/lib/rules/core/variables.js`);
+const nodejsCommonjs = require(`${__dirname}/lib/rules/core/nodejs-commonjs.js`);
+const stylisticIssues = require(`${__dirname}/lib/rules/core/stylistic-issues.js`);
+const es6 = require(`${__dirname}/lib/rules/core/es6.js`);
 
-const babel = require('./lib/rules/plugins/babel.js');
-const sortClassMembers = require('./lib/rules/plugins/sort-class-members.js');
+const babel = require(`${__dirname}/lib/rules/plugins/babel.js`);
 
 module.exports = {
     env: {
@@ -24,7 +23,7 @@ module.exports = {
         ecmaVersion: 6,
         sourceType: 'module',
     },
-    plugins: ['babel', 'sort-class-members'],
+    plugins: ['babel'],
     rules: {
         strict: ['error', 'global'],
         ...possibleErrors,
@@ -34,6 +33,5 @@ module.exports = {
         ...stylisticIssues,
         ...es6,
         ...babel,
-        ...sortClassMembers,
     },
 };

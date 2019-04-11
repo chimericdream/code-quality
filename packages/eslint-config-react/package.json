@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-react",
-    "version": "1.0.0-beta.1",
+    "version": "1.2.1",
     "description": "My personal opinionated ESLint rules for React",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-react/",
@@ -17,18 +17,14 @@
         "react"
     ],
     "license": "MIT",
+    "dependencies": {
+        "eslint-plugin-react": "^7.12.4"
+    },
     "devDependencies": {
-        "@babel/preset-env": "7.2.0",
-        "@chimericdream/eslint-config": "3.0.0-beta.2",
-        "babel-eslint": "10.0.1",
-        "eslint": "5.9.0",
-        "eslint-plugin-babel": "5.3.0"
+        "@chimericdream/eslint-config": "^3.0.6",
+        "eslint": "^5.16.0"
     },
     "peerDependencies": {
-        "babel-eslint": ">=10.0.0",
-        "eslint": ">=5.9.0",
-        "eslint-plugin-babel": ">=5.3.0",
-        "eslint-plugin-react": ">=7.11.0",
-        "eslint-plugin-sort-class-members": ">=1.4.0"
+        "eslint": "^5.9.0"
     }
 }

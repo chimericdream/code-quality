@@ -9,18 +9,12 @@ module.exports = {
     plugins: ['react'],
     rules: {
         // Core React rules
-        'react/boolean-prop-naming': [
-            'error',
-            {
-                propTypeNames: ['bool'],
-                rule: '^(is|has)[A-Z][a-z0-9]*([A-Z][a-z0-9]*)*$',
-            },
-        ],
+        'react/boolean-prop-naming': 'off',
         'react/button-has-type': 'error',
         'react/default-props-match-prop-types': 'error',
         'react/destructuring-assignment': ['error', 'always'],
         'react/display-name': 'error',
-        'react/forbid-component-props': ['error', {forbid: ['className', 'style']}],
+        'react/forbid-component-props': 'off',
         'react/forbid-dom-props': ['error', {forbid: ['style']}],
         'react/forbid-elements': 'off',
         'react/forbid-prop-types': 'off',
@@ -50,11 +44,21 @@ module.exports = {
         'react/no-unused-state': 'error',
         'react/no-will-update-set-state': ['error', 'disallow-in-func'],
         'react/prefer-es6-class': ['error', 'always'],
-        'react/prefer-stateless-function': ['error', {ignorePureComponents: true}],
-        'react/prop-types': 'error',
+        'react/prefer-stateless-function': 'off',
+        'react/prop-types': [
+            'error',
+            {
+                ignore: [
+                    'children',
+                    'history',
+                    'location',
+                    'match',
+                ],
+            },
+        ],
         'react/react-in-jsx-scope': 'error',
         'react/require-default-props': ['error', {forbidDefaultForRequired: true}],
-        'react/require-optimization': ['error', {allowDecorators: []}],
+        'react/require-optimization': 'off',
         'react/require-render-return': 'error',
         'react/self-closing-comp': ['error', {component: true, html: false}],
         'react/sort-comp': [
@@ -135,17 +139,11 @@ module.exports = {
         'react/jsx-filename-extension': ['error', {extensions: ['.js', '.jsx']}],
         'react/jsx-first-prop-new-line': ['error', 'multiline'],
         'react/jsx-fragments': ['error', 'element'],
-        'react/jsx-handler-names': [
-            'error',
-            {
-                eventHandlerPropPrefix: 'on',
-                eventHandlerPrefix: '(handle|toggle)',
-            },
-        ],
+        'react/jsx-handler-names': 'off',
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': 'error',
         'react/jsx-key': 'error',
-        'react/jsx-max-depth': ['error', {max: 3}],
+        'react/jsx-max-depth': ['error', {max: 5}],
         'react/jsx-max-props-per-line': [
             'error',
             {
@@ -153,7 +151,7 @@ module.exports = {
                 when: 'multiline',
             },
         ],
-        'react/jsx-no-bind': 'error',
+        'react/jsx-no-bind': 'off',
         'react/jsx-no-comment-textnodes': 'error',
         'react/jsx-no-duplicate-props': ['error', {ignoreCase: true}],
         'react/jsx-no-literals': 'error',

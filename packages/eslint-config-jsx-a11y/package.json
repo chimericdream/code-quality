@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-jsx-a11y",
-    "version": "1.0.0-beta.1",
+    "version": "1.0.1",
     "description": "My personal opinionated ESLint rules for the jsx-a11y plugin",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-jsx-a11y/",
@@ -19,18 +19,14 @@
         "accessibility"
     ],
     "license": "MIT",
+    "dependencies": {
+        "eslint-plugin-jsx-a11y": "^6.2.1"
+    },
     "devDependencies": {
-        "@babel/preset-env": "7.2.0",
-        "@chimericdream/eslint-config": "3.0.0-beta.2",
-        "babel-eslint": "10.0.1",
-        "eslint": "5.9.0",
-        "eslint-plugin-babel": "5.3.0"
+        "@chimericdream/eslint-config": "^3.0.6",
+        "eslint": "^5.16.0"
     },
     "peerDependencies": {
-        "babel-eslint": ">=10.0.0",
-        "eslint": ">=5.9.0",
-        "eslint-plugin-babel": ">=5.3.0",
-        "eslint-plugin-jsx-a11y": ">=6.1.0",
-        "eslint-plugin-sort-class-members": ">=1.4.0"
+        "eslint": "^5.9.0"
     }
 }

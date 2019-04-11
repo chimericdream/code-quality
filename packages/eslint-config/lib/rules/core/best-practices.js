@@ -22,7 +22,7 @@ module.exports = {
     ],
     'array-callback-return': 'warn',
     'block-scoped-var': 'error',
-    'class-methods-use-this': 'warn',
+    'class-methods-use-this': 'off',
     'complexity': ['warn', {max: 10}],
     'consistent-return': ['error', {treatUndefinedAsUnspecified: false}],
     'curly': ['error', 'all'],
@@ -107,7 +107,7 @@ module.exports = {
     'no-useless-concat': 'error',
     'no-useless-escape': 'error',
     'no-useless-return': 'warn',
-    'no-void': 'error',
+    'no-void': 'off',
     'no-warning-comments': [
         'warn',
         {

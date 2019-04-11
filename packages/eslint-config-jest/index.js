@@ -17,7 +17,7 @@ module.exports = {
         'jest/expect-expect': ['error', {assertFunctionNames: ['expect', 'expectSaga']}],
         'jest/lowercase-name': ['error', {ignore: ['describe']}],
         'jest/no-alias-methods': 'error',
-        'jest/no-disabled-tests': 'error',
+        'jest/no-disabled-tests': 'warn',
         'jest/no-focused-tests': 'error',
         'jest/no-jasmine-globals': 'error',
         'jest/no-hooks': ['error', {allow: ['afterEach']}],

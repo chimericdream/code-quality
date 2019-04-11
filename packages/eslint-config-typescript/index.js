@@ -8,7 +8,7 @@ module.exports = {
         'typescript/class-name-casing': 'error',
         'typescript/explicit-function-return-type': ['error', {allowExpressions: true}],
         'typescript/explicit-member-accessibility': 'warn',
-        'typescript/generic-type-naming': ['error', '^T[A-Z][a-zA-Z]+$'],
+        'typescript/generic-type-naming': ['error', '^[A-Z][a-zA-Z]*$'],
         'typescript/interface-name-prefix': ['error', 'never'],
         'typescript/member-delimiter-style': [
             'error',
@@ -19,7 +19,7 @@ module.exports = {
             },
         ],
         'typescript/member-naming': 'off',
-        'typescript/member-ordering': 'error',
+        'typescript/member-ordering': 'off',
         'typescript/no-angle-bracket-type-assertion': 'error',
 
         // Already enabled in main eslint config
@@ -34,7 +34,8 @@ module.exports = {
             {allows: ['private', 'readonly']},
         ],
         'typescript/no-triple-slash-reference': 'error',
-        'typescript/no-type-alias': 'error',
+        'typescript/no-type-alias': 'off',
+        'no-unused-vars': 'off',
         'typescript/no-unused-vars': 'error',
 
         // Already enabled in main eslint config

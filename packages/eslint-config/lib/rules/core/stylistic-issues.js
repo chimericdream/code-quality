@@ -10,20 +10,7 @@ module.exports = {
 
     // See babel/camelcase
     'camelcase': 'off',
-    'capitalized-comments': [
-        'warn',
-        'always',
-        {
-            block: {
-                ignoreInlineComments: true,
-                ignorePattern: 'pragma|ignore|noop|no-op|noinspection',
-            },
-            line: {
-                ignoreConsecutiveComments: true,
-                ignorePattern: 'pragma|ignore|noop|no-op|noinspection',
-            },
-        },
-    ],
+    'capitalized-comments': 'off',
     'comma-dangle': [
         'error',
         {
@@ -67,16 +54,19 @@ module.exports = {
                 'a',
                 'b',
                 'cb',
+                'db',
                 'e',
                 'el',
                 'ex',
                 'fn',
                 'i',
+                'id',
                 'j',
                 'rp',
                 't',
                 'x',
                 'y',
+                'z',
             ],
             min: 3,
             properties: 'always',
@@ -86,7 +76,7 @@ module.exports = {
     'id-match': [
         'error',
         /* eslint-disable-next-line max-len */
-        '^\\$?([A-Z][a-z0-9]*(?:[A-Z][a-z0-9]*)*|[A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*|[a-z][a-z0-9]*(?:[A-Z][a-z0-9]*)*)$',
+        '^(?:\\$?([A-Z][a-z0-9]*(?:[A-Z][a-z0-9]*)*|[A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*|[a-z][a-z0-9]*(?:[A-Z][a-z0-9]*)*)|_id|_embedded)$',
         {properties: true},
     ],
     /* eslint-enable array-element-newline */
@@ -129,6 +119,7 @@ module.exports = {
             allowObjectStart: true,
             beforeBlockComment: true,
             beforeLineComment: true,
+            ignorePattern: '^ +noinspection',
         },
     ],
     'lines-between-class-members': ['error', 'always'],
@@ -138,6 +129,7 @@ module.exports = {
         {
             code: 100,
             ignoreComments: false,
+            ignorePattern: '^ *\\/\\* eslint.+',
             ignoreRegExpLiterals: true,
             ignoreStrings: false,
             ignoreTrailingComments: false,
@@ -153,10 +145,14 @@ module.exports = {
             skipComments: true,
         },
     ],
-    'max-lines-per-function': ['warn', {max: 30}],
+    'max-lines-per-function': ['warn', {max: 45}],
     'max-nested-callbacks': ['error', {max: 3}],
     'max-params': ['warn', {max: 5}],
-    'max-statements': ['warn', 10, {ignoreTopLevelFunctions: true}],
+    'max-statements': [
+        'warn',
+        20,
+        {ignoreTopLevelFunctions: true},
+    ],
     'max-statements-per-line': ['error', {max: 1}],
     'multiline-comment-style': ['error', 'starred-block'],
     'multiline-ternary': ['error', 'always-multiline'],
@@ -234,7 +230,7 @@ module.exports = {
     'no-underscore-dangle': [
         'error',
         {
-            allow: ['__'],
+            allow: ['__', '_id'],
             allowAfterSuper: true,
             allowAfterThis: true,
             enforceInMethodNames: true,
@@ -249,7 +245,7 @@ module.exports = {
         'error',
         {
             consistent: true,
-            minProperties: 3,
+            minProperties: 4,
         },
     ],
 
@@ -266,40 +262,28 @@ module.exports = {
     ],
     'one-var-declaration-per-line': ['error', 'always'],
     'operator-assignment': ['error', 'always'],
-    'operator-linebreak': [
-        'error',
-        'before',
-        {
-            overrides: {
-                ':': 'after',
-                '?': 'after',
-            },
-        },
-    ],
+    'operator-linebreak': ['error', 'before'],
     'padded-blocks': ['error', 'never'],
     'padding-line-between-statements': [
         'warn',
+        /* eslint-disable array-bracket-newline, array-element-newline, object-curly-newline */
         {blankLine: 'always', next: 'return', prev: '*'},
         {blankLine: 'always', next: '*', prev: ['const', 'let', 'var']},
         {blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var']},
         {blankLine: 'always', next: '*', prev: 'directive'},
         {blankLine: 'any', next: 'directive', prev: 'directive'},
+        /* eslint-enable array-bracket-newline, array-element-newline, object-curly-newline */
     ],
     'prefer-object-spread': 'error',
-    'quote-props': ['error', 'consistent-as-needed', {keywords: true}],
+    'quote-props': [
+        'error',
+        'consistent-as-needed',
+        {keywords: true},
+    ],
 
     // See babel/quotes
     'quotes': 'off',
-    'require-jsdoc': [
-        'warn',
-        {
-            require: {
-                ClassDeclaration: true,
-                FunctionDeclaration: true,
-                MethodDefinition: true,
-            },
-        },
-    ],
+    'require-jsdoc': 'off',
 
     // See babel/semi
     'semi': 'off',
@@ -308,7 +292,14 @@ module.exports = {
     'sort-keys': 'off',
     'sort-vars': 'off',
     'space-before-blocks': ['error', 'always'],
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': [
+        'error',
+        {
+            anonymous: 'never',
+            named: 'never',
+            asyncArrow: 'always',
+        },
+    ],
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': ['error', {int32Hint: false}],
     'space-unary-ops': ['error', {nonwords: false, words: true}],
@@ -316,7 +307,11 @@ module.exports = {
         'error',
         'always',
         {
-            block: {balanced: true, exceptions: ['*'], markers: ['!']},
+            block: {
+                balanced: true,
+                exceptions: ['*'],
+                markers: ['!'],
+            },
             line: {
                 exceptions: ['-', '+'],
                 markers: ['/'],

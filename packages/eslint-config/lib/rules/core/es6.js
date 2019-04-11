@@ -43,13 +43,7 @@ module.exports = {
             ignoreReadBeforeAssign: false,
         },
     ],
-    /* eslint-disable array-element-newline */
-    'prefer-destructuring': [
-        'error',
-        {array: false, object: true},
-        {enforceForRenamedProperties: true},
-    ],
-    /* eslint-enable array-element-newline */
+    'prefer-destructuring': 'off',
     'prefer-numeric-literals': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
