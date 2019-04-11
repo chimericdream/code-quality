@@ -76,7 +76,7 @@ module.exports = {
     'id-match': [
         'error',
         /* eslint-disable-next-line max-len */
-        '^(?:\\$?([A-Z][a-z0-9]*(?:[A-Z][a-z0-9]*)*|[A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*|[a-z][a-z0-9]*(?:[A-Z][a-z0-9]*)*)|_id|_embedded)$',
+        '^(?:(\\$|_|__)?([a-zA-Z][a-z0-9]*(?:[A-Z][a-z0-9]*)*|[A-Z][A-Z0-9]*(?:_[A-Z][A-Z0-9]*)*))$',
         {properties: true},
     ],
     /* eslint-enable array-element-newline */
