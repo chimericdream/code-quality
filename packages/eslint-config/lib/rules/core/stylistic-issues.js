@@ -2,11 +2,11 @@
 /* global module */
 
 module.exports = {
-    'array-bracket-newline': ['error', {minItems: 4, multiline: true}],
+    'array-bracket-newline': ['warn', {minItems: 4, multiline: true}],
     'array-bracket-spacing': ['error', 'never'],
-    'array-element-newline': ['error', {minItems: 4, multiline: true}],
+    'array-element-newline': ['warn', {minItems: 4, multiline: true}],
     'block-spacing': ['error', 'never'],
-    'brace-style': ['error', '1tbs'],
+    'brace-style': ['error', 'stroustrup'],
 
     // See babel/camelcase
     'camelcase': 'off',
