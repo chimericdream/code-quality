@@ -25,7 +25,7 @@ module.exports = {
             conditionalAssign: false,
             enforceForArrowConditionals: false,
             ignoreJSX: 'all',
-            nestedBinaryExpressions: true,
+            nestedBinaryExpressions: false,
             returnAssign: false,
         },
     ],
