@@ -31,6 +31,7 @@ module.exports = {
     ],
     'no-extra-semi': 'error',
     'no-func-assign': 'error',
+    'no-import-assign': 'error',
     'no-inner-declarations': ['error', 'both'],
     'no-invalid-regexp': ['error', {allowConstructorFlags: ['u', 'y']}],
     'no-irregular-whitespace': [
@@ -76,7 +77,5 @@ module.exports = {
             requireReturnType: true,
         },
     ],
-
-    // See babel/valid-typeof
-    'valid-typeof': 'off',
+    'valid-typeof': 'error',
 };

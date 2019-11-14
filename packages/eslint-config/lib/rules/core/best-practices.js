@@ -27,6 +27,7 @@ module.exports = {
     'consistent-return': ['error', {treatUndefinedAsUnspecified: false}],
     'curly': ['error', 'all'],
     'default-case': 'error',
+    'default-param-last': 'error',
     'dot-location': ['error', 'property'],
     'dot-notation': 'error',
     'eqeqeq': ['error', 'always'],
@@ -58,9 +59,7 @@ module.exports = {
     ],
     'no-implicit-globals': 'error',
     'no-implied-eval': 'error',
-
-    // See babel/no-invalid-this
-    'no-invalid-this': 'off',
+    'no-invalid-this': 'error',
     'no-iterator': 'error',
     'no-labels': ['error', {allowLoop: true, allowSwitch: true}],
     'no-lone-blocks': 'error',
@@ -99,11 +98,17 @@ module.exports = {
     'no-sequences': 'error',
     'no-throw-literal': 'error',
     'no-unmodified-loop-condition': 'warn',
-
-    // See babel/no-unused-expressions
-    'no-unused-expressions': 'off',
+    'no-unused-expressions': [
+        'error',
+        {
+            allowShortCircuit: false,
+            allowTaggedTemplates: false,
+            allowTernary: false,
+        },
+    ],
     'no-unused-labels': 'warn',
     'no-useless-call': 'error',
+    'no-useless-catch': 'warn',
     'no-useless-concat': 'error',
     'no-useless-escape': 'error',
     'no-useless-return': 'warn',
@@ -116,7 +121,9 @@ module.exports = {
         },
     ],
     'no-with': 'error',
+    'prefer-named-capture-group': 'warn',
     'prefer-promise-reject-errors': 'error',
+    'prefer-regex-literals': 'error',
     'radix': ['error', 'always'],
     'require-await': 'warn',
     'require-unicode-regexp': 'error',

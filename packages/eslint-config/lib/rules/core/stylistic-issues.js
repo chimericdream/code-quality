@@ -7,9 +7,7 @@ module.exports = {
     'array-element-newline': ['warn', {minItems: 4, multiline: true}],
     'block-spacing': ['error', 'never'],
     'brace-style': ['error', 'stroustrup'],
-
-    // See babel/camelcase
-    'camelcase': 'off',
+    'camelcase': ['error', {properties: 'always'}],
     'capitalized-comments': 'off',
     'comma-dangle': [
         'error',
@@ -42,6 +40,7 @@ module.exports = {
             allowArrowFunctions: true,
         },
     ],
+    'function-call-argument-newline': ['error', 'consistent'],
     'function-paren-newline': ['error', 'multiline'],
     'id-blacklist': 'off',
     'id-length': [
@@ -156,9 +155,16 @@ module.exports = {
     'max-statements-per-line': ['error', {max: 1}],
     'multiline-comment-style': ['error', 'starred-block'],
     'multiline-ternary': ['error', 'always-multiline'],
-
-    // See babel/new-cap
-    'new-cap': 'off',
+    'new-cap': [
+        'error',
+        {
+            capIsNew: true,
+            capIsNewExceptions: [],
+            newIsCap: true,
+            newIsCapExceptions: [],
+            properties: true,
+        },
+    ],
     'new-parens': 'error',
     'newline-per-chained-call': ['error', {ignoreChainWithDepth: 2}],
     'no-array-constructor': 'error',
@@ -248,9 +254,7 @@ module.exports = {
             minProperties: 4,
         },
     ],
-
-    // See babel/object-curly-spacing
-    'object-curly-spacing': 'off',
+    'object-curly-spacing': ['error', 'never'],
     'object-property-newline': ['error', {allowAllPropertiesOnSameLine: true}],
     'one-var': [
         'warn',
@@ -280,13 +284,15 @@ module.exports = {
         'consistent-as-needed',
         {keywords: true},
     ],
-
-    // See babel/quotes
-    'quotes': 'off',
-    'require-jsdoc': 'off',
-
-    // See babel/semi
-    'semi': 'off',
+    'quotes': [
+        'error',
+        'single',
+        {
+            allowTemplateLiterals: false,
+            avoidEscape: true,
+        },
+    ],
+    'semi': ['error', 'always'],
     'semi-spacing': ['error', {after: true, before: false}],
     'semi-style': ['error', 'last'],
     'sort-keys': 'off',
