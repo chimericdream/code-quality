@@ -59,6 +59,7 @@ module.exports = {
                 'el',
                 'ex',
                 'fn',
+                'fs',
                 'i',
                 'id',
                 'j',
