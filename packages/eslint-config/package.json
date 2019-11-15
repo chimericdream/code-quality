@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config",
-    "version": "4.0.0",
+    "version": "5.0.0",
     "description": "My personal opinionated ESLint rules",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-main/",
