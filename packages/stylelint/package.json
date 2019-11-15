@@ -5,6 +5,9 @@
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/stylelint/",
     "main": "index.js",
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "lint": "eslint index.js lib"
     },
