@@ -1,14 +1,8 @@
 /* global module */
+'use strict';
 
 module.exports = {
     parser: 'babel-eslint',
-    parserOptions: {
-        ecmaFeatures: {
-            experimentalObjectRestSpread: true,
-        },
-        ecmaVersion: 6,
-        sourceType: 'module',
-    },
     plugins: ['babel'],
     rules: {
         // Superseded by rules below

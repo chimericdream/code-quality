@@ -1,4 +1,5 @@
 /* global __dirname, module, require */
+'use strict';
 
 const possibleErrors = require(`${__dirname}/lib/rules/core/possible-errors.js`);
 const bestPractices = require(`${__dirname}/lib/rules/core/best-practices.js`);

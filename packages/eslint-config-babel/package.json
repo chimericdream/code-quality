@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "My personal opinionated Babel ESLint rules",
     "author": "Bill Parrott <bill@chimericdream.com>",
-    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-main/",
+    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-babel/",
     "main": "index.js",
     "scripts": {
         "lint": "eslint index.js lib"
@@ -16,11 +16,11 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "@babel/preset-env": "^7.4.3",
-        "babel-eslint": "^10.0.1",
+        "babel-eslint": "^10.0.3",
         "eslint-plugin-babel": "^5.3.0"
     },
     "devDependencies": {
+        "@chimericdream/eslint-config": "^3.0.7",
         "eslint": "^6.6.0"
     }
 }

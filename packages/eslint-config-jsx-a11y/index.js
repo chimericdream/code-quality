@@ -1,4 +1,5 @@
 /* global module */
+'use strict';
 
 module.exports = {
     plugins: ['jsx-a11y'],
@@ -12,6 +13,7 @@ module.exports = {
         'jsx-a11y/aria-proptypes': 'error',
         'jsx-a11y/aria-role': 'error',
         'jsx-a11y/aria-unsupported-elements': 'error',
+        'jsx-a11y/autocomplete-valid': 'error',
         'jsx-a11y/click-events-have-key-events': 'error',
         'jsx-a11y/heading-has-content': 'error',
         'jsx-a11y/html-has-lang': 'error',
@@ -31,8 +33,8 @@ module.exports = {
                 ],
             },
         ],
-        'jsx-a11y/label-has-for': 'off',
         'jsx-a11y/label-has-associated-control': 'error',
+        'jsx-a11y/lang': 'error',
         'jsx-a11y/media-has-caption': 'error',
         'jsx-a11y/mouse-events-have-key-events': 'error',
         'jsx-a11y/no-access-key': 'error',

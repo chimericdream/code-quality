@@ -1,4 +1,5 @@
 /* global module */
+'use strict';
 
 module.exports = {
     parserOptions: {
@@ -15,7 +16,7 @@ module.exports = {
         'react/destructuring-assignment': ['error', 'always'],
         'react/display-name': 'error',
         'react/forbid-component-props': 'off',
-        'react/forbid-dom-props': ['error', {forbid: ['style']}],
+        'react/forbid-dom-props': 'off',
         'react/forbid-elements': 'off',
         'react/forbid-prop-types': 'off',
         'react/forbid-foreign-prop-types': 'error',
@@ -44,6 +45,7 @@ module.exports = {
         'react/no-unused-state': 'error',
         'react/no-will-update-set-state': ['error', 'disallow-in-func'],
         'react/prefer-es6-class': ['error', 'always'],
+        'react/prefer-read-only-props': 'off',
         'react/prefer-stateless-function': 'off',
         'react/prop-types': [
             'error',
@@ -110,9 +112,16 @@ module.exports = {
                 sortShapeProp: true,
             },
         ],
-
-        // No need for this, because the 'style' property is forbidden above
-        'react/style-prop-object': 'off',
+        'react/state-in-constructor': ['error', 'always'],
+        'react/static-property-placement': [
+            'warn',
+            'static public field',
+            {
+                defaultProps: 'property assignment',
+                propTypes: 'property assignment',
+            },
+        ],
+        'react/style-prop-object': 'error',
         'react/void-dom-elements-no-children': 'error',
 
         // JSX related rules
@@ -127,6 +136,7 @@ module.exports = {
                 props: 'never',
             },
         ],
+        'react/jsx-curly-newline': ['error', {multiline: 'require', singleline: 'forbid'}],
         'react/jsx-curly-spacing': [
             'error',
             {
@@ -155,11 +165,13 @@ module.exports = {
         'react/jsx-no-comment-textnodes': 'error',
         'react/jsx-no-duplicate-props': ['error', {ignoreCase: true}],
         'react/jsx-no-literals': 'error',
-        'react/jsx-props-no-multi-spaces': 'error',
+        'react/jsx-no-useless-fragment': 'error',
         'react/jsx-no-target-blank': 'error',
         'react/jsx-no-undef': 'error',
         'react/jsx-one-expression-per-line': 'off',
         'react/jsx-pascal-case': 'error',
+        'react/jsx-props-no-multi-spaces': 'error',
+        'react/jsx-props-no-spreading': 'off',
         'react/jsx-sort-default-props': ['error', {ignoreCase: true}],
         'react/jsx-sort-props': [
             'error',
@@ -172,6 +184,7 @@ module.exports = {
                 shorthandLast: false,
             },
         ],
+        'react/jsx-space-before-closing': 'off',
         'react/jsx-tag-spacing': [
             'error',
             {

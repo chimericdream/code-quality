@@ -20,13 +20,10 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "eslint-plugin-jsx-a11y": "^6.2.1"
+        "eslint-plugin-jsx-a11y": "^6.2.3"
     },
     "devDependencies": {
         "@chimericdream/eslint-config": "^3.0.7",
-        "eslint": "^5.16.0"
-    },
-    "peerDependencies": {
-        "eslint": "^5.9.0"
+        "eslint": "^6.6.0"
     }
 }
