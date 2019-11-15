@@ -1,5 +1,6 @@
 /* eslint-disable max-lines */
 /* global module */
+'use strict';
 
 module.exports = {
     'array-bracket-newline': ['warn', {minItems: 4, multiline: true}],

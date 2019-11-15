@@ -1,19 +1,105 @@
-/* eslint-disable filenames/no-index */
 /* global module */
 'use strict';
 
-const possibleErrors = require('./lib/rules/core/possible-errors.js');
-const languageFeatures = require('./lib/rules/core/language-features.js');
-const stylisticIssues = require('./lib/rules/core/stylistic-issues.js');
+const disabled = () => null;
 
-const scssRules = require('./lib/rules/plugins/scss.js');
+const identPattern = /[a-z]+(-[a-z]+)*/u;
 
 module.exports = {
     plugins: ['stylelint-scss'],
     rules: {
-        ...possibleErrors,
-        ...languageFeatures,
-        ...stylisticIssues,
-        ...scssRules,
+        // Core Stylelint rules superseded by ones below
+        'at-rule-no-unknown': disabled(),
+
+        // Actual rules start here
+        'scss/at-each-key-value-single-line': true,
+
+        // Superseded by core block-closing-brace-newline-after rule
+        'scss/at-else-closing-brace-newline-after': disabled(),
+        'scss/at-else-closing-brace-space-after': disabled(),
+        'scss/at-else-empty-line-before': 'never',
+        'scss/at-else-if-parentheses-space-before': 'always',
+
+        'scss/at-extend-no-missing-placeholder': true,
+
+        'scss/at-function-named-arguments': disabled(),
+        'scss/at-function-parentheses-space-before': 'never',
+        'scss/at-function-pattern': identPattern,
+
+        // Superseded by core block-closing-brace-newline-after rule
+        'scss/at-if-closing-brace-newline-after': disabled(),
+        'scss/at-if-closing-brace-space-after': disabled(),
+        'scss/at-if-no-null': true,
+
+        'scss/at-import-no-partial-leading-underscore': true,
+        'scss/at-import-partial-extension': 'always',
+        'scss/at-import-partial-extension-blacklist': ['sass', 'less'],
+        'scss/at-import-partial-extension-whitelist': ['scss', 'css'],
+
+        'scss/at-mixin-argumentless-call-parentheses': 'always',
+        'scss/at-mixin-named-arguments': disabled(),
+        'scss/at-mixin-parentheses-space-before': 'never',
+        'scss/at-mixin-pattern': identPattern,
+
+        'scss/at-rule-conditional-no-parentheses': disabled(),
+        'scss/at-rule-no-unknown': true,
+
+        'scss/dollar-variable-colon-newline-after': 'always-multi-line',
+        'scss/dollar-variable-colon-space-after': 'at-least-one-space',
+        'scss/dollar-variable-colon-space-before': 'never',
+        'scss/dollar-variable-default': [true, {ignore: 'local'}],
+        'scss/dollar-variable-empty-line-before': [
+            'always',
+            {
+                except: ['first-nested', 'after-dollar-variable'],
+                ignore: ['after-comment', 'inside-single-line-block'],
+            },
+        ],
+        'scss/dollar-variable-no-missing-interpolation': true,
+        'scss/dollar-variable-pattern': [
+            identPattern,
+            {
+                ignore: ['global'],
+            },
+        ],
+
+        'scss/percent-placeholder-pattern': identPattern,
+
+        'scss/double-slash-comment-empty-line-before': [
+            'always',
+            {
+                except: ['first-nested'],
+                ignore: ['between-comments', 'stylelint-commands'],
+            },
+        ],
+        'scss/double-slash-comment-inline': 'never',
+        'scss/double-slash-comment-whitespace-inside': 'always',
+
+        'scss/declaration-nested-properties': 'never',
+        'scss/declaration-nested-properties-no-divided-groups': true,
+
+        'scss/dimension-no-non-numeric-values': true,
+
+        'scss/function-color-relative': disabled(),
+        'scss/function-quote-no-quoted-strings-inside': true,
+        'scss/function-unquote-no-unquoted-strings-inside': true,
+
+        'scss/map-keys-quotes': 'always',
+
+        'scss/media-feature-value-dollar-variable': 'always',
+
+        'scss/partial-no-import': disabled(),
+
+        'scss/operator-no-newline-after': true,
+        'scss/operator-no-newline-before': true,
+        'scss/operator-no-unspaced': true,
+
+        'scss/selector-nest-combinators': disabled(),
+        'scss/selector-no-redundant-nesting-selector': true,
+        'scss/selector-no-union-class-name': true,
+
+        'scss/no-dollar-variables': true,
+        'scss/no-duplicate-dollar-variables': true,
+        'scss/no-duplicate-mixins': true,
     },
 };

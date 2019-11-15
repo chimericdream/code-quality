@@ -1,8 +1,10 @@
 /* global module, require */
+'use strict';
 
 const baseConfig = require('./index');
 
 module.exports = {
+    root: true,
     ...baseConfig,
     parserOptions: {
         ecmaVersion: 2020,

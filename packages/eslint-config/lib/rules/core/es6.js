@@ -1,4 +1,5 @@
 /* global module, require */
+'use strict';
 
 const config = require('../../config.js');
 const {restrictedModules} = config;

@@ -1,4 +1,5 @@
 /* global module */
+'use strict';
 
 module.exports = {
     'init-declarations': ['error', 'always'],

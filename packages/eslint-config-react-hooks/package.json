@@ -1,9 +1,9 @@
 {
-    "name": "@chimericdream/eslint-config-babel",
+    "name": "@chimericdream/eslint-config-react-hooks",
     "version": "1.0.0-beta.1",
-    "description": "My personal opinionated Babel ESLint rules",
+    "description": "My personal opinionated ESLint rules for React hooks",
     "author": "Bill Parrott <bill@chimericdream.com>",
-    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-babel/",
+    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-react-hooks/",
     "main": "index.js",
     "scripts": {
         "lint": "eslint index.js lib"
@@ -12,12 +12,14 @@
         "url": "https://github.com/chimericdream/code-quality/issues"
     },
     "keywords": [
-        "eslint"
+        "eslint",
+        "eslintconfig",
+        "react",
+        "hooks"
     ],
     "license": "MIT",
     "dependencies": {
-        "babel-eslint": "^10.0.3",
-        "eslint-plugin-babel": "^5.3.0"
+        "eslint-plugin-react-hooks": "^2.0.0"
     },
     "devDependencies": {
         "@chimericdream/eslint-config": "^3.0.7",

@@ -1,4 +1,5 @@
 /* global module */
+'use strict';
 
 const warningComments = (() => {
     const base = [

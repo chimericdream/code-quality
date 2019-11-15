@@ -1,11 +1,11 @@
 /* global module */
+'use strict';
 
 const disabled = () => null;
 
+const identPattern = /[a-z]+(-[a-z]+)*/u;
+
 module.exports = {
-    'at-rule-blacklist': disabled(),
-    'at-rule-no-vendor-prefix': true,
-    'at-rule-whitelist': disabled(),
     'color-named': [
         'never',
         {
@@ -13,36 +13,54 @@ module.exports = {
         },
     ],
     'color-no-hex': disabled(),
-    'comment-word-blacklist': ['/^(TODO|FIX)/'],
-    'custom-media-pattern': disabled(),
-    'custom-property-pattern': '.+',
-    'declaration-block-no-redundant-longhand-properties': true,
-    'declaration-block-single-line-max-declarations': 3,
-    'declaration-no-important': true,
-    'declaration-property-unit-blacklist': disabled(),
-    'declaration-property-unit-whitelist': disabled(),
-    'declaration-property-value-blacklist': disabled(),
-    'declaration-property-value-whitelist': disabled(),
+
     'function-blacklist': disabled(),
     'function-url-no-scheme-relative': true,
     'function-url-scheme-blacklist': disabled(),
     'function-url-scheme-whitelist': disabled(),
     'function-whitelist': disabled(),
-    'max-nesting-depth': 3,
-    'media-feature-name-blacklist': disabled(),
-    'media-feature-name-no-vendor-prefix': true,
-    'media-feature-name-whitelist': disabled(),
-    'no-unknown-animations': true,
+
+    'keyframes-name-pattern': identPattern,
+
     'number-max-precision': 3,
+
+    'time-min-milliseconds': 150,
+
+    'unit-blacklist': [
+        'em',
+        {
+            ignoreMediaFeatureNames: {
+                em: ['max-width', 'min-width'],
+            },
+        },
+    ],
+    'unit-whitelist': disabled(),
+
+    'shorthand-property-no-redundant-values': true,
+
+    'value-no-vendor-prefix': true,
+
+    'custom-property-pattern': identPattern,
+
     'property-blacklist': disabled(),
     'property-no-vendor-prefix': true,
     'property-whitelist': disabled(),
+
+    'declaration-block-no-redundant-longhand-properties': true,
+    'declaration-no-important': true,
+    'declaration-property-unit-blacklist': disabled(),
+    'declaration-property-unit-whitelist': disabled(),
+    'declaration-property-value-blacklist': disabled(),
+    'declaration-property-value-whitelist': disabled(),
+    
+    'declaration-block-single-line-max-declarations': 3,
+
     'selector-attribute-operator-blacklist': disabled(),
     'selector-attribute-operator-whitelist': disabled(),
-    'selector-class-pattern': '^[a-z]+(-[a-z]+)*(-[0-9]+)?$',
+    'selector-class-pattern': /[a-z]+(-[a-z]+)*(-[0-9]+)?/u,
     'selector-combinator-blacklist': disabled(),
     'selector-combinator-whitelist': disabled(),
-    'selector-id-pattern': '^[a-z]+(-[a-z]+)*$',
+    'selector-id-pattern': identPattern,
     'selector-max-attribute': disabled(),
     'selector-max-class': disabled(),
     'selector-max-combinators': disabled(),
@@ -65,16 +83,26 @@ module.exports = {
     'selector-pseudo-class-whitelist': disabled(),
     'selector-pseudo-element-blacklist': disabled(),
     'selector-pseudo-element-whitelist': disabled(),
-    'shorthand-property-no-redundant-values': true,
-    'time-min-milliseconds': 150,
-    'unit-blacklist': [
-        'em',
+
+    'media-feature-name-blacklist': disabled(),
+    'media-feature-name-no-vendor-prefix': true,
+    'media-feature-name-value-whitelist': disabled(),
+    'media-feature-name-whitelist': disabled(),
+
+    'custom-media-pattern': disabled(),
+
+    'at-rule-blacklist': disabled(),
+    'at-rule-no-vendor-prefix': true,
+    'at-rule-property-requirelist': [
+        true,
         {
-            ignoreMediaFeatureNames: {
-                em: ['max-width', 'min-width'],
-            },
-        },
+            'font-face': ['font-family', 'font-style'],
+        }
     ],
-    'unit-whitelist': disabled(),
-    'value-no-vendor-prefix': true,
+    'at-rule-whitelist': disabled(),
+
+    'comment-word-blacklist': [/^@?(fix|todo|fixme|research|xxx)/iu],
+
+    'max-nesting-depth': 3,
+    'no-unknown-animations': true,
 };

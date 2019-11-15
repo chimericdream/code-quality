@@ -1,9 +1,9 @@
 {
-    "name": "@chimericdream/eslint-config-babel",
+    "name": "@chimericdream/eslint-config-redux-saga",
     "version": "1.0.0-beta.1",
-    "description": "My personal opinionated Babel ESLint rules",
+    "description": "My personal opinionated ESLint rules for Redux Saga",
     "author": "Bill Parrott <bill@chimericdream.com>",
-    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-babel/",
+    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-redux-saga/",
     "main": "index.js",
     "scripts": {
         "lint": "eslint index.js lib"
@@ -12,12 +12,14 @@
         "url": "https://github.com/chimericdream/code-quality/issues"
     },
     "keywords": [
-        "eslint"
+        "eslint",
+        "eslintconfig",
+        "redux",
+        "saga"
     ],
     "license": "MIT",
     "dependencies": {
-        "babel-eslint": "^10.0.3",
-        "eslint-plugin-babel": "^5.3.0"
+        "eslint-plugin-redux-saga": "^1.1.1"
     },
     "devDependencies": {
         "@chimericdream/eslint-config": "^3.0.7",
