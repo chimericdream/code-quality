@@ -22,7 +22,10 @@
         "eslint-plugin-react-redux": "^3.0.2"
     },
     "devDependencies": {
-        "@chimericdream/eslint-config": "^4.0.0",
+        "@chimericdream/eslint-config": "^5.0.0",
         "eslint": "^6.6.0"
+    },
+    "peerDependencies": {
+        "eslint": "^6.0.0"
     }
 }
