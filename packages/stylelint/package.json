@@ -17,7 +17,7 @@
     ],
     "license": "MIT",
     "devDependencies": {
-        "@chimericdream/eslint-config": "^3.0.2"
+        "@chimericdream/eslint-config": "^4.0.0"
     },
     "peerDependencies": {
         "stylelint": "^11.0.0"

@@ -23,7 +23,7 @@
         "eslint-plugin-jsx-a11y": "^6.2.3"
     },
     "devDependencies": {
-        "@chimericdream/eslint-config": "^3.0.7",
+        "@chimericdream/eslint-config": "^4.0.0",
         "eslint": "^6.6.0"
     }
 }
