@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-redux-saga",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "My personal opinionated ESLint rules for Redux Saga",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-redux-saga/",
@@ -25,7 +25,7 @@
         "eslint-plugin-redux-saga": "^1.1.1"
     },
     "devDependencies": {
-        "@chimericdream/eslint-config": "^5.0.1",
+        "@chimericdream/eslint-config": "^5.1.0",
         "eslint": "^6.6.0"
     },
     "peerDependencies": {
