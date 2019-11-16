@@ -136,12 +136,12 @@ module.exports = {
                 props: 'never',
             },
         ],
-        'react/jsx-curly-newline': ['error', {multiline: 'require', singleline: 'forbid'}],
+        'react/jsx-curly-newline': ['error', {multiline: 'consistent', singleline: 'forbid'}],
         'react/jsx-curly-spacing': [
             'error',
             {
                 when: 'never',
-                attributes: {allowMultiline: false, when: 'never'},
+                attributes: {allowMultiline: true, when: 'never'},
                 children: {when: 'never'},
             },
         ],
