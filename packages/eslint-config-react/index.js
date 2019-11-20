@@ -164,7 +164,7 @@ module.exports = {
         'react/jsx-no-bind': 'off',
         'react/jsx-no-comment-textnodes': 'error',
         'react/jsx-no-duplicate-props': ['error', {ignoreCase: true}],
-        'react/jsx-no-literals': 'error',
+        'react/jsx-no-literals': 'off',
         'react/jsx-no-useless-fragment': 'error',
         'react/jsx-no-target-blank': 'error',
         'react/jsx-no-undef': 'error',
