@@ -18,9 +18,6 @@
         "eslint"
     ],
     "license": "MIT",
-    "devDependencies": {
-        "eslint": "^6.6.0"
-    },
     "peerDependencies": {
         "eslint": "^6.0.0"
     }
