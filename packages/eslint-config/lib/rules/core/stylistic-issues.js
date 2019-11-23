@@ -65,6 +65,7 @@ module.exports = {
                 'j',
                 'rp',
                 't',
+                'ts',
                 'x',
                 'y',
                 'z',
