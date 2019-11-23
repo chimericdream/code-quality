@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-babel",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "My personal opinionated Babel ESLint rules",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-babel/",
@@ -23,7 +23,7 @@
         "eslint-plugin-babel": "^5.3.0"
     },
     "devDependencies": {
-        "@chimericdream/eslint-config": "^5.1.0",
+        "@chimericdream/eslint-config": "^5.2.0",
         "eslint": "^6.6.0"
     },
     "peerDependencies": {
