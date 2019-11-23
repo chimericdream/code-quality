@@ -112,14 +112,7 @@ module.exports = {
                 },
             },
         ],
-        '@typescript-eslint/member-naming': [
-            'error',
-            {
-                'private': '^_',
-                'protected': '^_',
-                'public': '^[a-z]',
-            },
-        ],
+        '@typescript-eslint/member-naming': 'off',
 
         // @TODO: think about this
         '@typescript-eslint/member-ordering': 'off',
