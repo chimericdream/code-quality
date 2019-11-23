@@ -24,7 +24,7 @@ module.exports = {
     'array-callback-return': 'warn',
     'block-scoped-var': 'error',
     'class-methods-use-this': 'off',
-    'complexity': ['warn', {max: 10}],
+    'complexity': ['warn', {max: 20}],
     'consistent-return': ['error', {treatUndefinedAsUnspecified: false}],
     'curly': ['error', 'all'],
     'default-case': 'error',

@@ -124,8 +124,8 @@ module.exports = {
             ignorePattern: '^ +noinspection',
         },
     ],
-    'lines-between-class-members': ['error', 'always'],
-    'max-depth': ['error', {max: 3}],
+    'lines-between-class-members': ['error', 'always', {exceptAfterSingleLine: true}],
+    'max-depth': ['error', {max: 4}],
     'max-len': [
         'warn',
         {
@@ -147,14 +147,10 @@ module.exports = {
             skipComments: true,
         },
     ],
-    'max-lines-per-function': ['warn', {max: 45}],
-    'max-nested-callbacks': ['error', {max: 3}],
+    'max-lines-per-function': ['warn', {max: 80}],
+    'max-nested-callbacks': ['error', {max: 4}],
     'max-params': ['warn', {max: 5}],
-    'max-statements': [
-        'warn',
-        20,
-        {ignoreTopLevelFunctions: true},
-    ],
+    'max-statements': ['warn', 20, {ignoreTopLevelFunctions: true}],
     'max-statements-per-line': ['error', {max: 1}],
     'multiline-comment-style': ['error', 'starred-block'],
     'multiline-ternary': ['error', 'always-multiline'],
