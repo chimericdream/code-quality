@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-typescript",
-    "version": "4.1.1",
+    "version": "5.0.0",
     "description": "My personal opinionated ESLint rules for TypeScript",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-typescript/",

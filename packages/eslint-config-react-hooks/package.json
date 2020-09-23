@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-react-hooks",
-    "version": "1.0.4",
+    "version": "2.0.0",
     "description": "My personal opinionated ESLint rules for React hooks",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-react-hooks/",
