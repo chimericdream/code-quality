@@ -1,32 +1,61 @@
 /* global module */
-'use strict';
+
+const callbackNames = [
+    'callback',
+    'cb',
+    'done',
+    'next',
+    'rej',
+    'reject',
+    'res',
+    'resolve',
+];
+
+const restrictedModules = [
+    'assert',
+    'buffer',
+    'child_process',
+    'cluster',
+    'crypto',
+    'dgram',
+    'dns',
+    'domain',
+    'freelist',
+    'module',
+    'net',
+    'os',
+    'punycode',
+    'readline',
+    'repl',
+    'smalloc',
+    'stream',
+    'string_decoder',
+    'sys',
+    'timers',
+    'tls',
+    'tracing',
+    'tty',
+    'vm',
+    'zlib',
+];
+
+const warningComments = [
+    'fix',
+    'todo',
+    'fixme',
+    'research',
+    'xxx',
+].reduce(
+    (acc, key) => [
+        ...acc,
+        key,
+        `@${key}`,
+    ],
+    []
+);
 
 module.exports = {
-    restrictedModules: [
-        'assert',
-        'buffer',
-        'child_process',
-        'cluster',
-        'crypto',
-        'dgram',
-        'dns',
-        'domain',
-        'freelist',
-        'module',
-        'net',
-        'os',
-        'punycode',
-        'readline',
-        'repl',
-        'smalloc',
-        'stream',
-        'string_decoder',
-        'sys',
-        'timers',
-        'tls',
-        'tracing',
-        'tty',
-        'vm',
-        'zlib',
-    ],
+    callbackNames,
+    restrictedModules,
+    warningComments,
 };

@@ -15,6 +15,8 @@ module.exports = {
         'react-redux/mapStateToProps-no-store': 'error',
         'react-redux/mapStateToProps-prefer-hoisted': 'warn',
         'react-redux/mapStateToProps-prefer-parameters-names': 'error',
+        'react-redux/mapStateToProps-prefer-selectors': 'error',
+        'react-redux/useSelector-prefer-selectors': 'error',
         'react-redux/no-unused-prop-types': 'error',
         'react-redux/prefer-separate-component-file': 'off',
     },

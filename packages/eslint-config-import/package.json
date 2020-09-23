@@ -1,0 +1,28 @@
+{
+    "name": "@chimericdream/eslint-config-import",
+    "version": "1.0.0",
+    "description": "My personal opinionated Import ESLint rules",
+    "author": "Bill Parrott <bill@chimericdream.com>",
+    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-import/",
+    "main": "index.js",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "lint": "eslint index.js"
+    },
+    "bugs": {
+        "url": "https://github.com/chimericdream/code-quality/issues"
+    },
+    "keywords": [
+        "eslint"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-import-resolver-typescript": "^2.3.0"
+    },
+    "peerDependencies": {
+        "eslint": "^7.9.0"
+    }
+}

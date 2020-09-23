@@ -1,12 +1,10 @@
 /* global module */
-'use strict';
 
 module.exports = {
     parser: 'babel-eslint',
     plugins: ['babel'],
     rules: {
         // Superseded by rules below
-        'camelcase': 'off',
         'new-cap': 'off',
         'no-invalid-this': 'off',
         'no-unused-expressions': 'off',
@@ -15,37 +13,26 @@ module.exports = {
         'semi': 'off',
         'valid-typeof': 'off',
 
-        // Actual Babel rules
-        'babel/camelcase': ['error', {properties: 'always'}],
-        'babel/new-cap': [
-            'error',
-            {
-                capIsNew: true,
-                capIsNewExceptions: [],
-                newIsCap: true,
-                newIsCapExceptions: [],
-                properties: true,
-            },
-        ],
+        'babel/new-cap': 'error',
         'babel/no-invalid-this': 'error',
-        'babel/no-unused-expressions': [
-            'error',
-            {
-                allowShortCircuit: false,
-                allowTaggedTemplates: false,
-                allowTernary: false,
-            },
-        ],
-        'babel/object-curly-spacing': ['error', 'never'],
+        'babel/object-curly-spacing': ['warn', 'never'],
         'babel/quotes': [
-            'error',
+            'warn',
             'single',
             {
-                allowTemplateLiterals: false,
+                allowTemplateLiterals: true,
                 avoidEscape: true,
             },
         ],
         'babel/semi': ['error', 'always'],
-        'babel/valid-typeof': 'error',
+        'babel/no-unused-expressions': [
+            'warn',
+            {
+                allowShortCircuit: true,
+                allowTaggedTemplates: true,
+                allowTernary: true,
+            },
+        ],
+        'babel/valid-typeof': ['error', {requireStringLiterals: true}],
     },
 };

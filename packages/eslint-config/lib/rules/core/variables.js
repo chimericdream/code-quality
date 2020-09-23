@@ -1,44 +1,37 @@
-/* global module */
-'use strict';
+/* global module, require */
+
+const {callbackNames} = require('../../config.js');
 
 module.exports = {
-    'init-declarations': ['error', 'always'],
+    'init-declarations': 'off',
     'no-delete-var': 'error',
     'no-label-var': 'error',
-    'no-restricted-globals': ['error', 'event', 'fdescribe'],
+    'no-restricted-globals': 'off',
     'no-shadow': [
         'error',
         {
-            allow: [
-                'resolve',
-                'reject',
-                'done',
-                'cb',
-                'callback',
-            ],
             builtinGlobals: false,
-            hoist: 'all',
+            hoist: 'functions',
+            allow: [
+                ...callbackNames,
+                'el',
+                'err',
+                'error',
+            ],
         },
     ],
     'no-shadow-restricted-names': 'error',
-    'no-undef': ['error', {'typeof': true}],
+    'no-undef': 'error',
     'no-undef-init': 'error',
     'no-undefined': 'off',
     'no-unused-vars': [
-        'error',
+        'warn',
         {
             args: 'after-used',
             caughtErrors: 'all',
             ignoreRestSiblings: true,
-            vars: 'all',
+            varsIgnorePattern: 'unused',
         },
     ],
-    'no-use-before-define': [
-        'error',
-        {
-            classes: true,
-            functions: true,
-            variables: true,
-        },
-    ],
+    'no-use-before-define': 'error',
 };

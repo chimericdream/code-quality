@@ -1,0 +1,26 @@
+{
+    "name": "@touchnet/eslint-config-pd-eslint-import",
+    "description": "Import ESLint rules for use by front-end developers at TouchNet",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "author": "Bill Parrott <william.parrott@touchnet.com>",
+    "main": "config.js",
+    "files": [
+        "inc/**/*",
+        "config.js",
+        "CHANGELOG.md"
+    ],
+    "dependencies": {
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-import-resolver-typescript": "^2.3.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.8.1"
+    },
+    "peerDependencies": {
+        "eslint": "^7.8.1"
+    },
+    "publishConfig": {
+        "registry": "http://pdbuild:8081/nexus/content/groups/npm-private/"
+    }
+}

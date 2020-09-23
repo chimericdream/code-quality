@@ -1,0 +1,23 @@
+{
+    "name": "@touchnet/eslint-config-pd-eslint-formatjs",
+    "description": "FormatJS/I18n ESLint rules for use by front-end developers at TouchNet",
+    "version": "2.0.1",
+    "license": "UNLICENSED",
+    "author": "Bill Parrott <william.parrott@touchnet.com>",
+    "main": "config.js",
+    "files": [
+        "config.js"
+    ],
+    "dependencies": {
+        "eslint-plugin-formatjs": "^2.0.2"
+    },
+    "devDependencies": {
+        "eslint": "^7.8.1"
+    },
+    "peerDependencies": {
+        "eslint": "^7.8.1"
+    },
+    "publishConfig": {
+        "registry": "http://pdbuild:8081/nexus/content/groups/npm-private/"
+    }
+}

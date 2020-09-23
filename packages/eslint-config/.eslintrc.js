@@ -1,5 +1,4 @@
 /* global module, require */
-'use strict';
 
 const baseConfig = require('./index');
 
@@ -11,7 +10,10 @@ module.exports = {
     },
     rules: {
         ...baseConfig.rules,
+        'array-element-newline': 'off',
+        'lines-around-comment': 'off',
+        'max-len': 'off',
+        'max-lines': 'off',
         'no-magic-numbers': 'off',
-        'filenames/match-regex': 'off',
     },
 };

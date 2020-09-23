@@ -1,0 +1,31 @@
+{
+    "name": "@chimericdream/eslint-config-node",
+    "version": "1.0.0",
+    "description": "My personal opinionated ESLint rules for Node.js",
+    "author": "Bill Parrott <bill@chimericdream.com>",
+    "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-node/",
+    "main": "index.js",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "lint": "eslint index.js"
+    },
+    "bugs": {
+        "url": "https://github.com/chimericdream/code-quality/issues"
+    },
+    "keywords": [
+        "eslint",
+        "eslintconfig",
+        "jsx",
+        "a11y",
+        "accessibility"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "eslint-plugin-node": "^11.1.0"
+    },
+    "peerDependencies": {
+        "eslint": "^7.9.0"
+    }
+}

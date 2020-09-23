@@ -1,6 +1,4 @@
-/* eslint-disable global-require, filenames/match-exported, filenames/no-index */
-/* global module, require */
-'use strict';
+/* global module */
 
 module.exports = {
     env: {
@@ -9,49 +7,59 @@ module.exports = {
     plugins: ['jest'],
     rules: {
         'jest/consistent-test-it': [
-            'error',
+            'warn',
             {
                 fn: 'test',
                 withinDescribe: 'it',
             },
         ],
         'jest/expect-expect': ['error', {assertFunctionNames: ['expect', 'expectSaga']}],
-        'jest/lowercase-name': ['error', {ignore: ['describe']}],
-        'jest/no-alias-methods': 'error',
+        'jest/lowercase-name': 'off',
+        'jest/no-alias-methods': 'warn',
         'jest/no-commented-out-tests': 'error',
+        'jest/no-conditional-expect': 'error',
+        'jest/no-deprecated-functions': 'error',
         'jest/no-disabled-tests': 'warn',
+        'jest/no-done-callback': 'error',
         'jest/no-duplicate-hooks': 'error',
-        'jest/no-expect-resolves': 'error',
         'jest/no-export': 'error',
-        'jest/no-focused-tests': 'error',
+        'jest/no-focused-tests': 'warn',
+        'jest/no-hooks': ['warn', {allow: ['afterAll', 'afterEach']}],
+        'jest/no-identical-title': 'warn',
         'jest/no-if': 'error',
+        'jest/no-interpolation-in-snapshots': 'error',
         'jest/no-jasmine-globals': 'error',
-        'jest/no-hooks': ['error', {allow: ['afterEach']}],
-        'jest/no-identical-title': 'error',
         'jest/no-jest-import': 'error',
-
-        // @TODO: research more about this
-        'jest/no-large-snapshots': 'off',
-        'jest/no-mocks-import': 'error',
-        'jest/no-standalone-expect': 'error',
-        'jest/no-test-callback': 'warn',
+        'jest/no-large-snapshots': 'warn',
+        'jest/no-mocks-import': 'warn',
+        'jest/no-restricted-matchers': [
+            'error',
+            {
+                resolves: 'Use `expect(await promise)` instead.',
+                toBeFalsy: null,
+                toBeTruthy: null,
+            },
+        ],
+        'jest/no-standalone-expect': [
+            'error',
+            {
+                additionalTestBlockFunctions: ['each.test', 'each.it'],
+            },
+        ],
         'jest/no-test-prefixes': 'error',
         'jest/no-test-return-statement': 'error',
-        'jest/no-truthy-falsy': 'error',
-        'jest/no-try-expect': 'error',
-        'jest/prefer-called-with': 'error',
+        'jest/prefer-called-with': 'warn',
         'jest/prefer-expect-assertions': 'warn',
         'jest/prefer-hooks-on-top': 'warn',
-        'jest/prefer-inline-snapshots': 'off',
         'jest/prefer-spy-on': 'warn',
-        'jest/prefer-strict-equal': 'error',
-        'jest/prefer-to-be-null': 'error',
-        'jest/prefer-to-be-undefined': 'error',
-        'jest/prefer-to-contain': 'error',
-        'jest/prefer-to-have-length': 'error',
-        'jest/prefer-todo': 'error',
-        'jest/require-to-throw-message': 'warn',
+        'jest/prefer-strict-equal': 'warn',
+        'jest/prefer-to-be-null': 'warn',
+        'jest/prefer-to-be-undefined': 'warn',
+        'jest/prefer-to-contain': 'warn',
+        'jest/prefer-to-have-length': 'warn',
+        'jest/prefer-todo': 'warn',
         'jest/require-top-level-describe': 'error',
+        'jest/require-to-throw-message': 'warn',
         'jest/valid-describe': 'error',
         'jest/valid-expect-in-promise': 'error',
         'jest/valid-expect': 'error',
