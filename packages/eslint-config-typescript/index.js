@@ -218,6 +218,8 @@ module.exports = {
                     'will',
                     'show',
                     'hide',
+                    'was',
+                    'had',
                 ],
             },
             {
