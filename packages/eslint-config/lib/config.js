@@ -45,14 +45,7 @@ const warningComments = [
     'fixme',
     'research',
     'xxx',
-].reduce(
-    (acc, key) => [
-        ...acc,
-        key,
-        `@${key}`,
-    ],
-    []
-);
+].reduce((acc, key) => [...acc, `@${key}`], []);
 
 module.exports = {
     callbackNames,
