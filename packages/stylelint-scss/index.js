@@ -48,11 +48,24 @@ module.exports = {
         'scss/dollar-variable-colon-space-after': 'at-least-one-space',
         'scss/dollar-variable-colon-space-before': 'never',
         'scss/dollar-variable-default': [true, {ignore: 'local'}],
+        'scss/dollar-variable-empty-line-after': [
+            'always',
+            {
+                except: ['before-dollar-variable', 'last-nested'],
+                ignore: ['inside-single-line-block'],
+            },
+        ],
         'scss/dollar-variable-empty-line-before': [
             'always',
             {
                 except: ['first-nested', 'after-dollar-variable'],
                 ignore: ['after-comment', 'inside-single-line-block'],
+            },
+        ],
+        'scss/dollar-variable-first-in-block': [
+            true,
+            {
+                ignore: ['comments', 'imports'],
             },
         ],
         'scss/dollar-variable-no-missing-interpolation': true,
@@ -64,6 +77,9 @@ module.exports = {
         ],
 
         'scss/percent-placeholder-pattern': identPattern,
+
+        'scss/comment-no-empty': true,
+        'scss/comment-no-loud': disabled(),
 
         'scss/double-slash-comment-empty-line-before': [
             'always',
@@ -99,7 +115,14 @@ module.exports = {
         'scss/selector-no-union-class-name': true,
 
         'scss/no-dollar-variables': true,
-        'scss/no-duplicate-dollar-variables': true,
+        'scss/no-duplicate-dollar-variables': [
+            true,
+            {
+                ignoreDefaults: true,
+                ignoreInside: ['at-rule'],
+            },
+        ],
         'scss/no-duplicate-mixins': true,
+        'scss/no-global-function-names': true,
     },
 };

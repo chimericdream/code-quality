@@ -6,8 +6,8 @@
         "postinstall": "lerna bootstrap"
     },
     "devDependencies": {
-        "@chimericdream/eslint-config": "^6.0.1",
-        "eslint": "^7.9.0",
+        "@chimericdream/eslint-config": ">=6.0.1",
+        "eslint": ">=7.19.0",
         "lerna": "3.22.1"
     }
 }

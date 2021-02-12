@@ -19,9 +19,9 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "eslint-plugin-formatjs": "^2.7.11"
+        "eslint-plugin-formatjs": ">=2.12.0"
     },
     "peerDependencies": {
-        "eslint": "^7.9.0"
+        "eslint": ">=7.9.0"
     }
 }

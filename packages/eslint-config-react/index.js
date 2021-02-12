@@ -99,14 +99,18 @@ module.exports = {
             },
         ],
         'react/jsx-equals-spacing': ['warn', 'never'],
-        // @TODO: do we want to restrict this to 'jsx' only?
-        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-        'react/jsx-filename-extension': 'off',
+        'react/jsx-filename-extension': ['warn', {extensions: ['.jsx', '.tsx']}],
         'react/jsx-first-prop-new-line': ['warn', 'multiline'],
         'react/jsx-handler-names': 'off',
         'react/jsx-indent': ['warn', 4],
         'react/jsx-indent-props': 'error',
-        'react/jsx-key': 'error',
+        'react/jsx-key': [
+            'error',
+            {
+                checkFragmentShorthand: true,
+                checkKeyMustBeforeSpread: true,
+            },
+        ],
         'react/jsx-max-depth': 'off',
         'react/jsx-max-props-per-line': [
             'warn',
@@ -115,8 +119,10 @@ module.exports = {
                 when: 'multiline',
             },
         ],
+        'react/jsx-newline': 'off',
         'react/jsx-no-bind': 'off',
         'react/jsx-no-comment-textnodes': 'error',
+        'react/jsx-no-constructed-context-values': 'error',
         'react/jsx-no-duplicate-props': 'error',
         // @TODO: this could eliminate confusion when text is used in conjunction with components, which can cause spacing issues
         // (see also: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md)

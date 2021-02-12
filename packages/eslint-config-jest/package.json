@@ -21,9 +21,9 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "eslint-plugin-jest": "^24.0.2"
+        "eslint-plugin-jest": ">=24.0.2"
     },
     "peerDependencies": {
-        "eslint": "^7.9.0"
+        "eslint": ">=7.9.0"
     }
 }

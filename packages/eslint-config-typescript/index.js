@@ -26,6 +26,7 @@ module.exports = {
         'lines-between-class-members': 'off',
         'no-array-constructor': 'off',
         'no-dupe-class-members': 'off',
+        'no-duplicate-imports': 'off',
         'no-empty-function': 'off',
         'no-extra-parens': 'off',
         'no-extra-semi': 'off',
@@ -41,10 +42,12 @@ module.exports = {
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
+        'object-curly-spacing': 'off',
         'quotes': 'off',
         'require-await': 'off',
         'semi': 'off',
         'space-before-function-paren': 'off',
+        'space-infix-ops': 'off',
 
         // Disable Babel ESLint rules superseded by ones below
         'babel/quotes': 'off',
@@ -78,10 +81,9 @@ module.exports = {
             'error',
             {
                 types: {
-                    Object: 'Use {} instead',
-                    String: {
-                        message: 'Use string instead',
-                        fixWith: 'string',
+                    '[]': {
+                        message: 'Use unknown[] instead',
+                        fixWith: 'unknown[]',
                     },
                 },
             },
@@ -92,6 +94,7 @@ module.exports = {
             {allowSingleLine: false},
         ],
         '@typescript-eslint/comma-spacing': ['error', {before: false, after: true}],
+        '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
         '@typescript-eslint/consistent-type-assertions': [
             'error',
             {
@@ -220,6 +223,8 @@ module.exports = {
                     'hide',
                     'was',
                     'had',
+                    'include',
+                    'exclude',
                 ],
             },
             {
@@ -231,7 +236,12 @@ module.exports = {
         '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-base-to-string': 'error',
         '@typescript-eslint/no-confusing-non-null-assertion': 'error',
+        '@typescript-eslint/no-confusing-void-expression': [
+            'error',
+            {'ignoreArrowShorthand': true},
+        ],
         '@typescript-eslint/no-dupe-class-members': 'error',
+        '@typescript-eslint/no-duplicate-imports': ['error', {includeExports: true}],
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-empty-function': ['warn', {allow: ['constructors']}],
         '@typescript-eslint/no-empty-interface': ['error', {allowSingleExtends: true}],
@@ -303,7 +313,7 @@ module.exports = {
             },
         ],
         '@typescript-eslint/no-require-imports': 'error',
-        '@typescript-eslint/no-shadow':  [
+        '@typescript-eslint/no-shadow': [
             'error',
             {
                 allow: [
@@ -338,6 +348,7 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-qualifier': 'warn',
         '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+        '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
         '@typescript-eslint/no-unsafe-assignment': 'error',
         '@typescript-eslint/no-unsafe-call': 'error',
         '@typescript-eslint/no-unsafe-member-access': 'error',
@@ -363,6 +374,8 @@ module.exports = {
         '@typescript-eslint/no-useless-constructor': 'warn',
         // Not needed since `@typescript-eslint/no-require-imports` is enabled
         '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/non-nullable-type-assertion-style': 'error',
+        '@typescript-eslint/object-curly-spacing': ['warn', 'never'],
         '@typescript-eslint/prefer-as-const': 'warn',
         '@typescript-eslint/prefer-enum-initializers': 'error',
         '@typescript-eslint/prefer-for-of': 'warn',
@@ -408,6 +421,7 @@ module.exports = {
         ],
         '@typescript-eslint/return-await': ['warn', 'in-try-catch'],
         '@typescript-eslint/semi': ['error', 'always'],
+        '@typescript-eslint/sort-type-union-intersection-members': 'warn',
         '@typescript-eslint/space-before-function-paren': [
             'warn',
             {
@@ -416,6 +430,7 @@ module.exports = {
                 named: 'never',
             },
         ],
+        '@typescript-eslint/space-infix-ops': 'warn',
         '@typescript-eslint/strict-boolean-expressions': [
             'warn',
             {

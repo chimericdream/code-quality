@@ -22,9 +22,9 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "eslint-plugin-react-redux": "^3.3.0"
+        "eslint-plugin-react-redux": ">=3.3.0"
     },
     "peerDependencies": {
-        "eslint": "^7.9.0"
+        "eslint": ">=7.9.0"
     }
 }
