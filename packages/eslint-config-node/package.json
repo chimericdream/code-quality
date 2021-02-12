@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-node",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "My personal opinionated ESLint rules for Node.js",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-node/",

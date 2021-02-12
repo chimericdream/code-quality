@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/stylelint-scss",
-    "version": "3.0.4",
+    "version": "4.0.0",
     "description": "My personal opinionated Stylelint rules for SCSS code",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/stylelint-scss/",
