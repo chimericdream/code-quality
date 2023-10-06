@@ -23,9 +23,9 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "eslint-plugin-n": ">=15.2.2"
+        "eslint-plugin-n": ">=16.1.0"
     },
     "peerDependencies": {
-      "eslint": ">=8.17.0"
+        "eslint": ">=8.50.0"
     }
 }
