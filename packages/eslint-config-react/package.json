@@ -21,9 +21,9 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "eslint-plugin-react": ">=7.30.0"
+        "eslint-plugin-react": ">=7.33.2"
     },
     "peerDependencies": {
-      "eslint": ">=8.17.0"
+        "eslint": ">=8.50.0"
     }
 }

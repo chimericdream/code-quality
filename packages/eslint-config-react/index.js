@@ -12,10 +12,7 @@ module.exports = {
         // React
         'react/boolean-prop-naming': 'off',
         'react/button-has-type': 'error',
-        // @TODO: turn this back on if/when the linter is able to detect prop
-        //   types that come from interfaces that extend other interfaces
-        //   see: https://github.com/yannickcr/eslint-plugin-react/issues/1593
-        'react/default-props-match-prop-types': 'off',
+        'react/default-props-match-prop-types': 'error',
         'react/destructuring-assignment': [
             'warn',
             'always',
@@ -46,6 +43,7 @@ module.exports = {
         'react/no-is-mounted': 'error',
         'react/no-multi-comp': 'warn',
         'react/no-namespace': 'error',
+        'react/no-object-type-as-default-prop': 'error',
         'react/no-redundant-should-component-update': 'warn',
         'react/no-render-return-value': 'error',
         'react/no-set-state': 'off',
@@ -88,7 +86,7 @@ module.exports = {
         'react/sort-prop-types': 'off',
         // style is already forbidden (see react/forbid-component-props and react/forbid-dom-props)
         'react/style-prop-object': 'off',
-        'react/hook-use-state': 'warn',
+        'react/hook-use-state': ['warn', {allowDestructuredState: true}],
         'react/void-dom-elements-no-children': 'error',
 
         // JSX-specific rules
@@ -131,8 +129,10 @@ module.exports = {
         'react/jsx-no-constructed-context-values': 'error',
         'react/jsx-no-duplicate-props': 'error',
         'react/jsx-no-leaked-render': ['warn', {validStrategies: ['ternary', 'coerce']}],
-        // @TODO: this could eliminate confusion when text is used in conjunction with components, which can cause spacing issues
-        // (see also: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md)
+        /*
+         * @TODO: this could eliminate confusion when text is used in conjunction with components, which can cause spacing issues
+         * (see also: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md)
+         */
         'react/jsx-no-literals': 'off',
         'react/jsx-no-target-blank': 'error',
         'react/jsx-no-undef': ['warn', {allowGlobals: false}],
@@ -148,7 +148,7 @@ module.exports = {
         ],
         'react/jsx-props-no-multi-spaces': 'warn',
         'react/jsx-props-no-spreading': 'off',
-        'react/jsx-sort-default-props': 'off',
+        'react/sort-default-props': 'off',
         'react/jsx-sort-props': 'off',
         'react/jsx-tag-spacing': [
             'warn',
