@@ -10,4 +10,7 @@ module.exports = {
         'max-lines': 'off',
         'no-magic-numbers': 'off',
     },
+    'env': {
+        es2023: true,
+    },
 };
