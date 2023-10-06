@@ -1,3 +1,5 @@
+/* global module */
+
 const callbackNames = [
     'callback',
     'cb',
@@ -26,7 +28,6 @@ module.exports = {
         'lines-between-class-members': 'off',
         'no-array-constructor': 'off',
         'no-dupe-class-members': 'off',
-        'no-duplicate-imports': 'off',
         'no-empty-function': 'off',
         'no-extra-parens': 'off',
         'no-extra-semi': 'off',
@@ -35,6 +36,7 @@ module.exports = {
         'no-loss-of-precision': 'off',
         'no-magic-numbers': 'off',
         'no-redeclare': 'off',
+        'no-restricted-imports': 'off',
         'no-return-await': 'off',
         'no-shadow': 'off',
         'no-throw-literal': 'off',
@@ -43,9 +45,11 @@ module.exports = {
         'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
         'object-curly-spacing': 'off',
+        'padding-line-between-statements': 'off',
         'quotes': 'off',
         'require-await': 'off',
         'semi': 'off',
+        'space-before-blocks': 'off',
         'space-before-function-paren': 'off',
         'space-infix-ops': 'off',
 
@@ -103,6 +107,7 @@ module.exports = {
             },
         ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+        '@typescript-eslint/consistent-type-exports': ['error', {fixMixedExportsWithInlineTypeSpecifier: true}],
         '@typescript-eslint/consistent-type-imports': [
             'error',
             {
@@ -241,7 +246,7 @@ module.exports = {
             {'ignoreArrowShorthand': true},
         ],
         '@typescript-eslint/no-dupe-class-members': 'error',
-        '@typescript-eslint/no-duplicate-imports': ['error', {includeExports: true}],
+        '@typescript-eslint/no-duplicate-enum-values': 'error',
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-empty-function': ['warn', {allow: ['constructors']}],
         '@typescript-eslint/no-empty-interface': ['error', {allowSingleExtends: true}],
@@ -287,6 +292,7 @@ module.exports = {
                 ignoreReadonlyClassProperties: true,
             },
         ],
+        '@typescript-eslint/no-meaningless-void-operator': ['warn', {checkNever: true}],
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': [
             'error',
@@ -302,9 +308,9 @@ module.exports = {
                 allowDefinitionFiles: true,
             },
         ],
+        '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/no-parameter-properties': 'error',
         '@typescript-eslint/no-redeclare': [
             'error',
             {
@@ -312,7 +318,9 @@ module.exports = {
                 ignoreDeclarationMerge: true,
             },
         ],
+        '@typescript-eslint/no-redundant-type-constituents': 'warn',
         '@typescript-eslint/no-require-imports': 'error',
+        '@typescript-eslint/no-restricted-imports': 'off',
         '@typescript-eslint/no-shadow': [
             'error',
             {
@@ -349,6 +357,7 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-arguments': 'warn',
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
         '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
+        '@typescript-eslint/no-unsafe-argument': 'error',
         '@typescript-eslint/no-unsafe-assignment': 'error',
         '@typescript-eslint/no-unsafe-call': 'error',
         '@typescript-eslint/no-unsafe-member-access': 'error',
@@ -372,10 +381,13 @@ module.exports = {
         ],
         '@typescript-eslint/no-use-before-define': 'error',
         '@typescript-eslint/no-useless-constructor': 'warn',
+        '@typescript-eslint/no-useless-empty-export': 'warn',
         // Not needed since `@typescript-eslint/no-require-imports` is enabled
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/non-nullable-type-assertion-style': 'error',
         '@typescript-eslint/object-curly-spacing': ['warn', 'never'],
+        '@typescript-eslint/padding-line-between-statements': 'off',
+        '@typescript-eslint/parameter-properties': ['error', {prefer: 'class-property'}],
         '@typescript-eslint/prefer-as-const': 'warn',
         '@typescript-eslint/prefer-enum-initializers': 'error',
         '@typescript-eslint/prefer-for-of': 'warn',
@@ -397,6 +409,7 @@ module.exports = {
         '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
         '@typescript-eslint/prefer-regexp-exec': 'warn',
         '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
+        '@typescript-eslint/prefer-return-this-type': 'warn',
         '@typescript-eslint/prefer-ts-expect-error': 'error',
         '@typescript-eslint/promise-function-async': 'error',
         '@typescript-eslint/quotes': [
@@ -422,6 +435,7 @@ module.exports = {
         '@typescript-eslint/return-await': ['warn', 'in-try-catch'],
         '@typescript-eslint/semi': ['error', 'always'],
         '@typescript-eslint/sort-type-union-intersection-members': 'warn',
+        '@typescript-eslint/space-before-blocks': ['warn', 'always'],
         '@typescript-eslint/space-before-function-paren': [
             'warn',
             {

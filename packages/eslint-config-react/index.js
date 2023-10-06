@@ -30,8 +30,10 @@ module.exports = {
         'react/forbid-elements': 'off',
         'react/forbid-prop-types': 'off',
         'react/forbid-foreign-prop-types': 'warn',
+        'react/iframe-missing-sandbox': 'error',
         'react/no-access-state-in-setstate': 'error',
         'react/no-array-index-key': 'error',
+        'react/no-arrow-function-lifecycle': 'error',
         'react/no-children-prop': 'error',
         'react/no-danger': 'error',
         'react/no-danger-with-children': 'error',
@@ -40,8 +42,10 @@ module.exports = {
         'react/no-did-update-set-state': ['warn', 'disallow-in-func'],
         'react/no-direct-mutation-state': 'error',
         'react/no-find-dom-node': 'warn',
+        'react/no-invalid-html-attribute': 'error',
         'react/no-is-mounted': 'error',
         'react/no-multi-comp': 'warn',
+        'react/no-namespace': 'error',
         'react/no-redundant-should-component-update': 'warn',
         'react/no-render-return-value': 'error',
         'react/no-set-state': 'off',
@@ -55,6 +59,7 @@ module.exports = {
         'react/no-unused-state': 'warn',
         'react/no-will-update-set-state': ['warn', 'disallow-in-func'],
         'react/prefer-es6-class': ['warn', 'always'],
+        'react/prefer-exact-props': 'off',
         'react/prefer-stateless-function': 'off',
         'react/prop-types': [
             'error',
@@ -83,6 +88,7 @@ module.exports = {
         'react/sort-prop-types': 'off',
         // style is already forbidden (see react/forbid-component-props and react/forbid-dom-props)
         'react/style-prop-object': 'off',
+        'react/hook-use-state': 'warn',
         'react/void-dom-elements-no-children': 'error',
 
         // JSX-specific rules
@@ -124,6 +130,7 @@ module.exports = {
         'react/jsx-no-comment-textnodes': 'error',
         'react/jsx-no-constructed-context-values': 'error',
         'react/jsx-no-duplicate-props': 'error',
+        'react/jsx-no-leaked-render': ['warn', {validStrategies: ['ternary', 'coerce']}],
         // @TODO: this could eliminate confusion when text is used in conjunction with components, which can cause spacing issues
         // (see also: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md)
         'react/jsx-no-literals': 'off',

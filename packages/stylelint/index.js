@@ -1,35 +1,46 @@
 /* eslint-disable filenames/no-index */
 /* global module */
-'use strict';
 
 const disabled = () => null;
 const identPattern = /[a-z]+(-[a-z]+)*/u;
 
+/*
+ */
+
 module.exports = {
     rules: {
-        // Possible Errors
+        // Avoid Errors
         'color-no-invalid-hex': true,
 
         'font-family-no-duplicate-names': true,
         'font-family-no-missing-generic-family-keyword': true,
 
-        'function-calc-no-invalid': true,
+        'named-grid-areas-no-invalid': true,
+
         'function-calc-no-unspaced-operator': true,
         'function-linear-gradient-no-nonstandard-direction': true,
+        'function-no-unknown': true,
 
         'string-no-newline': true,
 
         'unit-no-unknown': true,
 
+        'custom-property-no-missing-var-function': true,
+
         'property-no-unknown': true,
 
         'keyframe-declaration-no-important': true,
+
+        'keyframe-block-no-duplicate-selectors': true,
 
         'declaration-block-no-duplicate-custom-properties': true,
         'declaration-block-no-duplicate-properties': [
             true,
             {
-                ignore: ['consecutive-duplicates-with-different-values'],
+                ignore: [
+                    'consecutive-duplicates-with-different-values',
+                    'consecutive-duplicates-with-same-prefixless-values',
+                ],
             },
         ],
         'declaration-block-no-shorthand-property-overrides': true,
@@ -52,8 +63,9 @@ module.exports = {
         'no-empty-source': true,
         'no-extra-semicolons': true,
         'no-invalid-double-slash-comments': true,
+        'no-invalid-position-at-import-rule': true,
 
-        // Language Features
+        // Enforce Conventions
         'alpha-value-notation': [
             'number',
             {
@@ -64,6 +76,7 @@ module.exports = {
         'hue-degree-notation': 'angle',
 
         'color-function-notation': 'modern',
+        'color-hex-alpha': 'never',
         'color-named': [
             'never',
             {
@@ -72,11 +85,13 @@ module.exports = {
         ],
         'color-no-hex': disabled(),
 
+        'function-allowed-list': disabled(),
         'function-disallowed-list': disabled(),
         'function-url-no-scheme-relative': true,
         'function-url-scheme-disallowed-list': disabled(),
         'function-url-scheme-allowed-list': disabled(),
-        'function-allowed-list': disabled(),
+
+        'import-notation': 'string',
 
         'keyframes-name-pattern': identPattern,
 
@@ -104,13 +119,14 @@ module.exports = {
         'property-no-vendor-prefix': true,
         'property-allowed-list': disabled(),
 
-        'declaration-block-no-redundant-longhand-properties': true,
         'declaration-no-important': true,
+        'declaration-property-max-values': disabled(),
         'declaration-property-unit-disallowed-list': disabled(),
         'declaration-property-unit-allowed-list': disabled(),
         'declaration-property-value-disallowed-list': disabled(),
         'declaration-property-value-allowed-list': disabled(),
 
+        'declaration-block-no-redundant-longhand-properties': true,
         'declaration-block-single-line-max-declarations': 3,
 
         'selector-attribute-name-disallowed-list': ['id'],
@@ -119,6 +135,7 @@ module.exports = {
         'selector-class-pattern': /[a-z]+(-[a-z]+)*(-[0-9]+)?/u,
         'selector-combinator-disallowed-list': disabled(),
         'selector-combinator-allowed-list': disabled(),
+        'selector-disallowed-list': disabled(),
         'selector-id-pattern': identPattern,
         'selector-max-attribute': disabled(),
         'selector-max-class': disabled(),
@@ -138,10 +155,13 @@ module.exports = {
             },
         ],
         'selector-no-vendor-prefix': true,
+        'selector-not-notation': 'complex',
         'selector-pseudo-class-disallowed-list': disabled(),
         'selector-pseudo-class-allowed-list': disabled(),
         'selector-pseudo-element-disallowed-list': disabled(),
         'selector-pseudo-element-allowed-list': disabled(),
+
+        'rule-selector-property-disallowed-list': disabled(),
 
         'media-feature-name-disallowed-list': disabled(),
         'media-feature-name-no-vendor-prefix': true,
@@ -164,7 +184,9 @@ module.exports = {
         'comment-word-disallowed-list': [/^@?(fix|todo|fixme|research|xxx)/iu],
 
         'max-nesting-depth': 3,
+        'no-irregular-whitespace': true,
         'no-unknown-animations': true,
+        'unicode-bom': 'never',
 
         // Stylistic Issues
         'color-hex-case': 'lower',
@@ -317,6 +339,5 @@ module.exports = {
         'no-eol-whitespace': true,
         'no-missing-end-of-source-newline': true,
         'no-empty-first-line': true,
-        'unicode-bom': 'never',
     },
 };

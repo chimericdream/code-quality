@@ -1,5 +1,4 @@
 /* global module */
-'use strict';
 
 const disabled = () => null;
 
@@ -10,6 +9,7 @@ module.exports = {
     rules: {
         // Core Stylelint rules superseded by ones below
         'at-rule-no-unknown': disabled(),
+        'function-no-unknown': disabled(),
 
         // Actual rules start here
         'scss/at-each-key-value-single-line': true,
@@ -44,6 +44,8 @@ module.exports = {
         'scss/at-rule-conditional-no-parentheses': disabled(),
         'scss/at-rule-no-unknown': true,
 
+        'scss/at-use-no-unnamespaced': true,
+
         'scss/dollar-variable-colon-newline-after': 'always-multi-line',
         'scss/dollar-variable-colon-space-after': 'at-least-one-space',
         'scss/dollar-variable-colon-space-before': 'never',
@@ -69,6 +71,7 @@ module.exports = {
             },
         ],
         'scss/dollar-variable-no-missing-interpolation': true,
+        'scss/dollar-variable-no-namespaced-assignment': true,
         'scss/dollar-variable-pattern': [
             identPattern,
             {
@@ -97,6 +100,7 @@ module.exports = {
         'scss/dimension-no-non-numeric-values': true,
 
         'scss/function-color-relative': disabled(),
+        'scss/function-no-unknown': true,
         'scss/function-quote-no-quoted-strings-inside': true,
         'scss/function-unquote-no-unquoted-strings-inside': true,
 

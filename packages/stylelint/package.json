@@ -20,6 +20,6 @@
     ],
     "license": "MIT",
     "peerDependencies": {
-        "stylelint": ">=13.10.0"
+        "stylelint": ">=14.9.1"
     }
 }

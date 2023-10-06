@@ -3,12 +3,12 @@
 module.exports = {
     plugins: ['formatjs'],
     rules: {
-        'blacklist-elements': 'off',
-        'enforce-default-message': 'error',
-        'enforce-description': 'error',
-        'enforce-id': 'off',
-        'enforce-placeholders': 'error',
-        'enforce-plural-rules': [
+        'formatjs/blacklist-elements': 'off',
+        'formatjs/enforce-default-message': 'error',
+        'formatjs/enforce-description': 'error',
+        'formatjs/enforce-id': 'off',
+        'formatjs/enforce-placeholders': 'error',
+        'formatjs/enforce-plural-rules': [
             'warn',
             {
                 zero: true,
@@ -19,12 +19,12 @@ module.exports = {
                 other: true,
             },
         ],
-        'no-camel-case': 'off',
-        'no-emoji': 'error',
-        'no-id': 'off',
-        'no-multiple-plurals': 'off',
-        'no-multiple-whitespaces': 'error',
-        'no-offset': 'warn',
-        'supported-datetime-skeleton': 'error',
+        'formatjs/no-camel-case': 'off',
+        'formatjs/no-complex-selectors': ['warn', {limit: 10}],
+        'formatjs/no-emoji': 'error',
+        'formatjs/no-id': 'off',
+        'formatjs/no-multiple-plurals': 'off',
+        'formatjs/no-multiple-whitespaces': 'error',
+        'formatjs/no-offset': 'warn',
     },
 };

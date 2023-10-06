@@ -19,11 +19,11 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "@babel/eslint-parser": ">=7.12.16",
-        "@babel/eslint-plugin": ">=7.12.13"
+        "@babel/eslint-parser": ">=7.18.2",
+        "@babel/eslint-plugin": ">=7.17.7"
     },
     "peerDependencies": {
-        "@babel/core": ">=7.11.0",
-        "eslint": ">=7.9.0"
+        "@babel/core": ">=7.18.2",
+        "eslint": ">=8.17.0"
     }
 }
