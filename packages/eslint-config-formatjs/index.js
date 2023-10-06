@@ -23,6 +23,7 @@ module.exports = {
         'formatjs/no-complex-selectors': ['warn', {limit: 10}],
         'formatjs/no-emoji': 'error',
         'formatjs/no-id': 'off',
+        'formatjs/no-literal-string-in-jsx': 'warn',
         'formatjs/no-multiple-plurals': 'off',
         'formatjs/no-multiple-whitespaces': 'error',
         'formatjs/no-offset': 'warn',
