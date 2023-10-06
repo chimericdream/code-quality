@@ -20,6 +20,9 @@ const warningComments = [
 ].reduce((acc, key) => [...acc, `@${key}`], []);
 
 module.exports = {
+    env: {
+        es2023: true,
+    },
     rules: {
         // Possible Problems
         'array-callback-return': ['error', {allowImplicit: true}],
