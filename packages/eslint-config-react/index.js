@@ -1,3 +1,5 @@
+/* global module */
+
 module.exports = {
     parserOptions: {
         ecmaFeatures: {
@@ -7,6 +9,7 @@ module.exports = {
     plugins: ['react'],
     globals: {
         JSX: 'readonly',
+        React: 'readonly',
     },
     rules: {
         // React
