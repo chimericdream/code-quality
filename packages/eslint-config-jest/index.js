@@ -4,7 +4,7 @@ module.exports = {
     env: {
         'jest/globals': true,
     },
-    plugins: ['jest'],
+    plugins: ['jest', 'jest-formatting'],
     rules: {
         'jest/consistent-test-it': [
             'warn',
