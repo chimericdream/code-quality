@@ -282,7 +282,7 @@ module.exports = {
         '@typescript-eslint/no-confusing-non-null-assertion': 'error',
         '@typescript-eslint/no-confusing-void-expression': [
             'error',
-            {'ignoreArrowShorthand': true},
+            {ignoreArrowShorthand: true},
         ],
         '@typescript-eslint/no-dupe-class-members': 'error',
         '@typescript-eslint/no-duplicate-enum-values': 'error',
@@ -315,7 +315,6 @@ module.exports = {
         ],
         '@typescript-eslint/no-floating-promises': ['error', {ignoreVoid: true}],
         '@typescript-eslint/no-for-in-array': 'error',
-        '@typescript-eslint/no-implicit-any-catch': 'error',
         '@typescript-eslint/no-implied-eval': 'error',
         '@typescript-eslint/no-import-type-side-effects': 'error',
         '@typescript-eslint/no-inferrable-types': 'off',
@@ -480,7 +479,6 @@ module.exports = {
         ],
         '@typescript-eslint/return-await': ['warn', 'in-try-catch'],
         '@typescript-eslint/semi': ['error', 'always'],
-        '@typescript-eslint/sort-type-union-intersection-members': 'warn',
         '@typescript-eslint/space-before-blocks': ['warn', 'always'],
         '@typescript-eslint/space-before-function-paren': [
             'warn',
