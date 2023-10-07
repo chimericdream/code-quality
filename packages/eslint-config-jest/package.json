@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-jest",
-    "version": "4.0.1",
+    "version": "4.1.0",
     "description": "My personal opinionated ESLint rules for the Jest plugin",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-jest/",

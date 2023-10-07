@@ -1,6 +1,6 @@
 {
     "name": "@chimericdream/eslint-config-react-redux",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "My personal opinionated ESLint rules for React Redux",
     "author": "Bill Parrott <bill@chimericdream.com>",
     "homepage": "https://github.com/chimericdream/code-quality/packages/eslint-config-react-redux/",
@@ -25,6 +25,6 @@
         "eslint-plugin-react-redux": ">=4.0.0"
     },
     "peerDependencies": {
-      "eslint": ">=8.17.0"
+        "eslint": ">=8.17.0"
     }
 }
