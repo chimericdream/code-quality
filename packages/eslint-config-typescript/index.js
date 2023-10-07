@@ -11,13 +11,23 @@ const callbackNames = [
     'resolve',
 ];
 
+const warningComments = [
+    'fix',
+    'todo',
+    'fixme',
+    'research',
+    'xxx',
+].reduce((acc, key) => [...acc, `@${key}`], []);
+
 module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
     rules: {
         // Disable core ESLint rules superseded by ones below
+        'block-spacing': 'off',
         'brace-style': 'off',
         'camelcase': 'off',
+        'class-methods-use-this': 'off',
         'comma-spacing': 'off',
         'default-param-last': 'off',
         'dot-notation': 'off',
@@ -25,6 +35,7 @@ module.exports = {
         'indent': 'off',
         'init-declarations': 'off',
         'keyword-spacing': 'off',
+        'lines-around-comment': 'off',
         'lines-between-class-members': 'off',
         'no-array-constructor': 'off',
         'no-dupe-class-members': 'off',
@@ -92,13 +103,16 @@ module.exports = {
                 },
             },
         ],
+        '@typescript-eslint/block-spacing': ['warn', 'never'],
         '@typescript-eslint/brace-style': [
             'warn',
             'stroustrup',
             {allowSingleLine: false},
         ],
+        '@typescript-eslint/class-methods-use-this': 'off',
         '@typescript-eslint/comma-spacing': ['error', {before: false, after: true}],
         '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
+        '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
         '@typescript-eslint/consistent-type-assertions': [
             'error',
             {
@@ -160,6 +174,31 @@ module.exports = {
             {
                 after: true,
                 before: true,
+            },
+        ],
+        '@typescript-eslint/lines-around-comment': [
+            'warn', {
+                beforeBlockComment: true,
+                afterBlockComment: false,
+                beforeLineComment: true,
+                afterLineComment: false,
+                allowBlockStart: true,
+                allowBlockEnd: true,
+                allowObjectStart: true,
+                allowObjectEnd: true,
+                allowArrayStart: true,
+                allowArrayEnd: true,
+                allowClassStart: true,
+                allowClassEnd: true,
+                allowEnumEnd: true,
+                allowEnumStart: true,
+                allowInterfaceEnd: true,
+                allowInterfaceStart: true,
+                allowModuleEnd: true,
+                allowModuleStart: true,
+                allowTypeEnd: true,
+                allowTypeStart: true,
+                ignorePattern: `(${warningComments.join('|')}|${warningComments.join('|').toUpperCase()}|noinspection)`,
             },
         ],
         '@typescript-eslint/lines-between-class-members': ['warn', 'always'],
@@ -247,6 +286,10 @@ module.exports = {
         ],
         '@typescript-eslint/no-dupe-class-members': 'error',
         '@typescript-eslint/no-duplicate-enum-values': 'error',
+        '@typescript-eslint/no-duplicate-type-constituents': [
+            'error',
+            {ignoreIntersections: false, ignoreUnions: false},
+        ],
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-empty-function': ['warn', {allow: ['constructors']}],
         '@typescript-eslint/no-empty-interface': ['error', {allowSingleExtends: true}],
@@ -274,6 +317,7 @@ module.exports = {
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-implicit-any-catch': 'error',
         '@typescript-eslint/no-implied-eval': 'error',
+        '@typescript-eslint/no-import-type-side-effects': 'error',
         '@typescript-eslint/no-inferrable-types': 'off',
         '@typescript-eslint/no-invalid-this': 'error',
         '@typescript-eslint/no-invalid-void-type': 'error',
@@ -301,6 +345,7 @@ module.exports = {
                 checksVoidReturn: true,
             },
         ],
+        '@typescript-eslint/no-mixed-enums': 'error',
         '@typescript-eslint/no-namespace': [
             'error',
             {
@@ -360,6 +405,7 @@ module.exports = {
         '@typescript-eslint/no-unsafe-argument': 'error',
         '@typescript-eslint/no-unsafe-assignment': 'error',
         '@typescript-eslint/no-unsafe-call': 'error',
+        '@typescript-eslint/no-unsafe-enum-comparison': 'error',
         '@typescript-eslint/no-unsafe-member-access': 'error',
         '@typescript-eslint/no-unsafe-return': 'error',
         '@typescript-eslint/no-unused-expressions': [
