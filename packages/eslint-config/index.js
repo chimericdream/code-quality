@@ -133,6 +133,7 @@ module.exports = {
                     'i',
                     'j',
                     'id',
+                    'on',
                     'qs',
                     'x',
                     'y',
