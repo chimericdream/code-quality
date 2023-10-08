@@ -94,23 +94,17 @@ module.exports = {
 
         // JSX-specific rules
         'react/jsx-boolean-value': ['warn', 'never'],
-        'react/jsx-child-element-spacing': 'warn',
-        'react/jsx-closing-bracket-location': ['warn', 'line-aligned'],
-        'react/jsx-closing-tag-location': 'warn',
-        'react/jsx-curly-spacing': [
-            'warn',
-            {
-                when: 'never',
-                attributes: {allowMultiline: false},
-                children: true,
-            },
-        ],
-        'react/jsx-equals-spacing': ['warn', 'never'],
+        'react/jsx-child-element-spacing': 'off',
+        'react/jsx-closing-bracket-location': 'off',
+        'react/jsx-closing-tag-location': 'off',
+        'react/jsx-curly-newline': 'off',
+        'react/jsx-curly-spacing': 'off',
+        'react/jsx-equals-spacing': 'off',
         'react/jsx-filename-extension': ['warn', {extensions: ['.jsx', '.tsx']}],
-        'react/jsx-first-prop-new-line': ['warn', 'multiline'],
+        'react/jsx-first-prop-new-line': 'off',
         'react/jsx-handler-names': 'off',
-        'react/jsx-indent': ['warn', 4],
-        'react/jsx-indent-props': 'error',
+        'react/jsx-indent': 'off',
+        'react/jsx-indent-props': 'off',
         'react/jsx-key': [
             'error',
             {
@@ -119,13 +113,7 @@ module.exports = {
             },
         ],
         'react/jsx-max-depth': 'off',
-        'react/jsx-max-props-per-line': [
-            'warn',
-            {
-                maximum: 1,
-                when: 'multiline',
-            },
-        ],
+        'react/jsx-max-props-per-line': 'off',
         'react/jsx-newline': 'off',
         'react/jsx-no-bind': 'off',
         'react/jsx-no-comment-textnodes': 'error',
@@ -140,7 +128,7 @@ module.exports = {
         'react/jsx-no-target-blank': 'error',
         'react/jsx-no-undef': ['warn', {allowGlobals: false}],
         'react/jsx-no-useless-fragment': 'warn',
-        'react/jsx-one-expression-per-line': ['warn', {allow: 'single-child'}],
+        'react/jsx-one-expression-per-line': 'off',
         'react/jsx-curly-brace-presence': 'off',
         'react/jsx-pascal-case': [
             'error',
@@ -149,32 +137,13 @@ module.exports = {
                 ignore: ['DNE'],
             },
         ],
-        'react/jsx-props-no-multi-spaces': 'warn',
+        'react/jsx-props-no-multi-spaces': 'off',
         'react/jsx-props-no-spreading': 'off',
         'react/sort-default-props': 'off',
         'react/jsx-sort-props': 'off',
-        'react/jsx-tag-spacing': [
-            'warn',
-            {
-                closingSlash: 'never',
-                beforeSelfClosing: 'always',
-                afterOpening: 'never',
-                beforeClosing: 'never',
-            },
-        ],
+        'react/jsx-tag-spacing': 'off',
         'react/jsx-uses-react': 'error',
         'react/jsx-uses-vars': 'error',
-        'react/jsx-wrap-multilines': [
-            'warn',
-            {
-                'declaration': 'parens-new-line',
-                'assignment': 'parens-new-line',
-                'return': 'parens-new-line',
-                'arrow': 'parens-new-line',
-                'condition': 'parens-new-line',
-                'logical': 'parens-new-line',
-                'prop': 'parens-new-line',
-            },
-        ],
+        'react/jsx-wrap-multilines': 'off',
     },
 };

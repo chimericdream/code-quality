@@ -11,14 +11,6 @@ const callbackNames = [
     'resolve',
 ];
 
-const warningComments = [
-    'fix',
-    'todo',
-    'fixme',
-    'research',
-    'xxx',
-].reduce((acc, key) => [...acc, `@${key}`], []);
-
 module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
@@ -28,12 +20,14 @@ module.exports = {
         'brace-style': 'off',
         'camelcase': 'off',
         'class-methods-use-this': 'off',
+        'comma-dangle': 'off',
         'comma-spacing': 'off',
         'default-param-last': 'off',
         'dot-notation': 'off',
         'func-call-spacing': 'off',
         'indent': 'off',
         'init-declarations': 'off',
+        'key-spacing': 'off',
         'keyword-spacing': 'off',
         'lines-around-comment': 'off',
         'lines-between-class-members': 'off',
@@ -103,14 +97,11 @@ module.exports = {
                 },
             },
         ],
-        '@typescript-eslint/block-spacing': ['warn', 'never'],
-        '@typescript-eslint/brace-style': [
-            'warn',
-            'stroustrup',
-            {allowSingleLine: false},
-        ],
+        '@typescript-eslint/block-spacing': 'off',
+        '@typescript-eslint/brace-style': 'off',
         '@typescript-eslint/class-methods-use-this': 'off',
-        '@typescript-eslint/comma-spacing': ['error', {before: false, after: true}],
+        '@typescript-eslint/comma-dangle': 'off',
+        '@typescript-eslint/comma-spacing': 'off',
         '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
         '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
         '@typescript-eslint/consistent-type-assertions': [
@@ -141,80 +132,15 @@ module.exports = {
         ],
         '@typescript-eslint/explicit-member-accessibility': ['error', {accessibility: 'explicit'}],
         '@typescript-eslint/explicit-module-boundary-types': 'warn',
-        '@typescript-eslint/func-call-spacing': ['warn', 'never'],
+        '@typescript-eslint/func-call-spacing': 'off',
         '@typescript-eslint/generic-type-naming': 'off',
-        '@typescript-eslint/indent': [
-            'error',
-            4,
-            {
-                ArrayExpression: 1,
-                CallExpression: {arguments: 'first'},
-                flatTernaryExpressions: false,
-                FunctionDeclaration: {
-                    body: 1,
-                    parameters: 'first',
-                },
-                FunctionExpression: {
-                    body: 1,
-                    parameters: 'first',
-                },
-                ignoreComments: false,
-                ignoredNodes: [],
-                ImportDeclaration: 1,
-                MemberExpression: 1,
-                ObjectExpression: 1,
-                outerIIFEBody: 1,
-                SwitchCase: 1,
-                VariableDeclarator: 1,
-            },
-        ],
+        '@typescript-eslint/indent': 'off',
         '@typescript-eslint/init-declarations': 'off',
-        '@typescript-eslint/keyword-spacing': [
-            'error',
-            {
-                after: true,
-                before: true,
-            },
-        ],
-        '@typescript-eslint/lines-around-comment': [
-            'warn', {
-                beforeBlockComment: true,
-                afterBlockComment: false,
-                beforeLineComment: true,
-                afterLineComment: false,
-                allowBlockStart: true,
-                allowBlockEnd: true,
-                allowObjectStart: true,
-                allowObjectEnd: true,
-                allowArrayStart: true,
-                allowArrayEnd: true,
-                allowClassStart: true,
-                allowClassEnd: true,
-                allowEnumEnd: true,
-                allowEnumStart: true,
-                allowInterfaceEnd: true,
-                allowInterfaceStart: true,
-                allowModuleEnd: true,
-                allowModuleStart: true,
-                allowTypeEnd: true,
-                allowTypeStart: true,
-                ignorePattern: `(${warningComments.join('|')}|${warningComments.join('|').toUpperCase()}|noinspection)`,
-            },
-        ],
-        '@typescript-eslint/lines-between-class-members': ['warn', 'always'],
-        '@typescript-eslint/member-delimiter-style': [
-            'error',
-            {
-                multiline: {
-                    delimiter: 'semi',
-                    requireLast: true,
-                },
-                singleline: {
-                    delimiter: 'semi',
-                    requireLast: false,
-                },
-            },
-        ],
+        '@typescript-eslint/key-spacing': 'off',
+        '@typescript-eslint/keyword-spacing': 'off',
+        '@typescript-eslint/lines-around-comment': 'off',
+        '@typescript-eslint/lines-between-class-members': 'off',
+        '@typescript-eslint/member-delimiter-style': 'off',
         // @TODO: think about this
         '@typescript-eslint/member-ordering': 'off',
         '@typescript-eslint/method-signature-style': ['error', 'property'],
@@ -273,7 +199,7 @@ module.exports = {
             },
             {
                 selector: ['function'],
-                format: ['camelCase'],
+                format: ['camelCase', 'PascalCase'],
                 leadingUnderscore: 'allow',
             },
         ],
@@ -284,7 +210,7 @@ module.exports = {
             'error',
             {ignoreArrowShorthand: true},
         ],
-        '@typescript-eslint/no-dupe-class-members': 'error',
+        '@typescript-eslint/no-dupe-class-members': 'off',
         '@typescript-eslint/no-duplicate-enum-values': 'error',
         '@typescript-eslint/no-duplicate-type-constituents': [
             'error',
@@ -295,16 +221,8 @@ module.exports = {
         '@typescript-eslint/no-empty-interface': ['error', {allowSingleExtends: true}],
         '@typescript-eslint/no-explicit-any': ['error', {fixToUnknown: true, ignoreRestArgs: false}],
         '@typescript-eslint/no-extra-non-null-assertion': 'error',
-        '@typescript-eslint/no-extra-parens': [
-            'error',
-            'all',
-            {
-                enforceForArrowConditionals: false,
-                ignoreJSX: 'all',
-                nestedBinaryExpressions: false,
-            },
-        ],
-        '@typescript-eslint/no-extra-semi': 'error',
+        '@typescript-eslint/no-extra-parens': 'off',
+        '@typescript-eslint/no-extra-semi': 'off',
         '@typescript-eslint/no-extraneous-class': [
             'error',
             {
@@ -318,7 +236,7 @@ module.exports = {
         '@typescript-eslint/no-implied-eval': 'error',
         '@typescript-eslint/no-import-type-side-effects': 'error',
         '@typescript-eslint/no-inferrable-types': 'off',
-        '@typescript-eslint/no-invalid-this': 'error',
+        '@typescript-eslint/no-invalid-this': 'off',
         '@typescript-eslint/no-invalid-void-type': 'error',
         '@typescript-eslint/no-loop-func': 'error',
         '@typescript-eslint/no-loss-of-precision': 'error',
@@ -355,13 +273,7 @@ module.exports = {
         '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/no-redeclare': [
-            'error',
-            {
-                builtinGlobals: true,
-                ignoreDeclarationMerge: true,
-            },
-        ],
+        '@typescript-eslint/no-redeclare': 'off',
         '@typescript-eslint/no-redundant-type-constituents': 'warn',
         '@typescript-eslint/no-require-imports': 'error',
         '@typescript-eslint/no-restricted-imports': 'off',
@@ -430,7 +342,7 @@ module.exports = {
         // Not needed since `@typescript-eslint/no-require-imports` is enabled
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/non-nullable-type-assertion-style': 'error',
-        '@typescript-eslint/object-curly-spacing': ['warn', 'never'],
+        '@typescript-eslint/object-curly-spacing': 'off',
         '@typescript-eslint/padding-line-between-statements': 'off',
         '@typescript-eslint/parameter-properties': ['error', {prefer: 'class-property'}],
         '@typescript-eslint/prefer-as-const': 'warn',
@@ -457,14 +369,7 @@ module.exports = {
         '@typescript-eslint/prefer-return-this-type': 'warn',
         '@typescript-eslint/prefer-ts-expect-error': 'error',
         '@typescript-eslint/promise-function-async': 'error',
-        '@typescript-eslint/quotes': [
-            'warn',
-            'single',
-            {
-                allowTemplateLiterals: true,
-                avoidEscape: true,
-            },
-        ],
+        '@typescript-eslint/quotes': 'off',
         '@typescript-eslint/require-array-sort-compare': 'warn',
         '@typescript-eslint/require-await': 'warn',
         '@typescript-eslint/restrict-plus-operands': 'error',
@@ -478,17 +383,10 @@ module.exports = {
             },
         ],
         '@typescript-eslint/return-await': ['warn', 'in-try-catch'],
-        '@typescript-eslint/semi': ['error', 'always'],
-        '@typescript-eslint/space-before-blocks': ['warn', 'always'],
-        '@typescript-eslint/space-before-function-paren': [
-            'warn',
-            {
-                anonymous: 'never',
-                asyncArrow: 'always',
-                named: 'never',
-            },
-        ],
-        '@typescript-eslint/space-infix-ops': 'warn',
+        '@typescript-eslint/semi': 'off',
+        '@typescript-eslint/space-before-blocks': 'off',
+        '@typescript-eslint/space-before-function-paren': 'off',
+        '@typescript-eslint/space-infix-ops': 'off',
         '@typescript-eslint/strict-boolean-expressions': [
             'warn',
             {
@@ -504,19 +402,7 @@ module.exports = {
         ],
         '@typescript-eslint/switch-exhaustiveness-check': 'warn',
         '@typescript-eslint/triple-slash-reference': 'error',
-        '@typescript-eslint/type-annotation-spacing': [
-            'error',
-            {
-                after: true,
-                before: false,
-                overrides: {
-                    arrow: {
-                        after: true,
-                        before: true,
-                    },
-                },
-            },
-        ],
+        '@typescript-eslint/type-annotation-spacing': 'off',
         '@typescript-eslint/typedef': [
             'error',
             {
